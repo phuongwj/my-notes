@@ -57,12 +57,13 @@ Runs multiple web-apps/sites.
 
 Relies on most tenants under-utilizing their resources.
 
-So you wouldn't have a submachine in there but you'd have a folder with permissions taht you could use, so you get to share the cost.
+So you wouldn't have a sub-machine in there but you'd have a folder with permissions taht you could use, so you get to share the cost.
 - **Pros:** Very cheap
 - **Cons:** Limited functionality, poor isolation
 
 #### Cloud Hosting
 **Multiple physical machines** that act as one system.
+
 The system is abstracted into multiple **cloud services**.
 - **Pros:** Flexible, scalable, secure, cost-effective, high configurability
 
@@ -101,27 +102,27 @@ Differences between Cloud Service Provider and Cloud Platform if you're wonderin
 
 ### Landscape of CSPs
 
-#### Tier-1 (Top Tier) 
+**Tier-1 (Top Tier)**
 Early to market, wide offering, strong synergies between services, well recognized in the industry.
 - Amazon Web Services (AWS)
 - Microsoft Azure
 - Google Cloud Platform (GCP)
 - Alibaba Cloud 
 
-#### Tier-2 (Mid Tier)
+**Tier-2 (Mid Tier)**
 Backed by well-known tech companies ,slow to innovate and turned to specialization.
 - IBM Cloud
 - Oracle Cloud
 - Huawei Cloud
 - Tencent Cloud
 
-#### Tier-3 (Light Tier)
+**Tier-3 (Light Tier)**
 Virtual Private Servers (VPS) turned to offer core IaaS offering. Simple, cost-effective.
 - Vultr
 - Digital Ocean
 - Akamai Connected Cloud (Linode)
 
-#### Tier-4 (Private Tier)
+**Tier-4 (Private Tier)**
 Infrastructure as Service software edployed to run ni an organization's own private data center
 - OpenStack (Rackspace)
 - Apache CloudStack
