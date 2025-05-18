@@ -35,23 +35,28 @@ For instance, when you upload a photo to Instagram or stream a show on Netflix, 
 ### The Evolution of Cloud Hosting
 
 Back then if you want to **host your website or web app**, you'd have to **get a dedicated server**.
+
 Cloud hosting is a way to make websites and applications accessible over the internet using the cloud.
 
 #### Dedicated Server 
 **One physical machine** dedicated **to a single business running a single project**.
+
 Runs a single web-app/site.
 - **Pros:** High security
 - **Cons:** Very expensive, high maintenance
 
 #### Virtual Private Server (VPS)
 **One physical machine** dedicated **to a single business** but then our machine is virtualized **into sub-machines**.
+
 Runs multiple web-apps/sites.
 - **Pros:** Better Utilization and Isolation of Resources 
 - **Cons:** Still expensive
 
 #### Shared Hosting
 **One physical machine**, shared by **hundred of businesses**.
+
 Relies on most tenants under-utilizing their resources.
+
 So you wouldn't have a submachine in there but you'd have a folder with permissions taht you could use, so you get to share the cost.
 - **Pros:** Very cheap
 - **Cons:** Limited functionality, poor isolation
@@ -97,10 +102,35 @@ Differences between Cloud Service Provider and Cloud Platform if you're wonderin
 ### Landscape of CSPs
 
 #### Tier-1 (Top Tier) 
-Early to market, wide offering, strong synergies between services, well recognized in the industry 
+Early to market, wide offering, strong synergies between services, well recognized in the industry.
 - Amazon Web Services (AWS)
 - Microsoft Azure
 - Google Cloud Platform (GCP)
 - Alibaba Cloud 
 
-###
+#### Tier-2 (Mid Tier)
+Backed by well-known tech companies ,slow to innovate and turned to specialization.
+- IBM Cloud
+- Oracle Cloud
+- Huawei Cloud
+- Tencent Cloud
+
+#### Tier-3 (Light Tier)
+Virtual Private Servers (VPS) turned to offer core IaaS offering. Simple, cost-effective.
+- Vultr
+- Digital Ocean
+- Akamai Connected Cloud (Linode)
+
+#### Tier-4 (Private Tier)
+Infrastructure as Service software edployed to run ni an organization's own private data center
+- OpenStack (Rackspace)
+- Apache CloudStack
+- *Vmware vSphere
+
+
+### Gartner Magic Quadrant for Cloud
+
+**Magic Quadrant (MQ)** is a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends such as direction, maturity and participants.  
+
+You might have to pay to access the report, it's not public.
+![Gartner_mq_2023](/ccp/assets/gartner.png "Gartner diagram that summarizes all the information)
