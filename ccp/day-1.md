@@ -1,4 +1,6 @@
 # day-1
+before reading, i recommend you to switch to a light appearance, since it will make reading this easier.
+
 
 ## 1. Cloud Concepts
 
@@ -36,7 +38,7 @@ Back then if you want to **host your website or web app**, you'd have to **get a
 Cloud hosting is a way to make websites and applications accessible over the internet using the cloud.
 
 #### Dedicated Server 
-**One physical machine** dedicated **to a single business running a single project** 
+**One physical machine** dedicated **to a single business running a single project**.
 Runs a single web-app/site.
 - **Pros:** High security
 - **Cons:** Very expensive, high maintenance
@@ -93,3 +95,12 @@ Differences between Cloud Service Provider and Cloud Platform if you're wonderin
 
 
 ### Landscape of CSPs
+
+#### Tier-1 (Top Tier) 
+Early to market, wide offering, strong synergies between services, well recognized in the industry 
+- Amazon Web Services (AWS)
+- Microsoft Azure
+- Google Cloud Platform (GCP)
+- Alibaba Cloud 
+
+###
