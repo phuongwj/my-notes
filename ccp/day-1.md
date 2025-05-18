@@ -102,27 +102,27 @@ Differences between Cloud Service Provider and Cloud Platform if you're wonderin
 
 ### Landscape of CSPs
 
-**Tier-1 (Top Tier)**
+**Tier-1 (Top Tier):**
 Early to market, wide offering, strong synergies between services, well recognized in the industry.
 - Amazon Web Services (AWS)
 - Microsoft Azure
 - Google Cloud Platform (GCP)
 - Alibaba Cloud 
 
-**Tier-2 (Mid Tier)**
+**Tier-2 (Mid Tier):**
 Backed by well-known tech companies ,slow to innovate and turned to specialization.
 - IBM Cloud
 - Oracle Cloud
 - Huawei Cloud
 - Tencent Cloud
 
-**Tier-3 (Light Tier)**
+**Tier-3 (Light Tier):**
 Virtual Private Servers (VPS) turned to offer core IaaS offering. Simple, cost-effective.
 - Vultr
 - Digital Ocean
 - Akamai Connected Cloud (Linode)
 
-**Tier-4 (Private Tier)**
+**Tier-4 (Private Tier):**
 Infrastructure as Service software edployed to run ni an organization's own private data center
 - OpenStack (Rackspace)
 - Apache CloudStack
@@ -134,4 +134,5 @@ Infrastructure as Service software edployed to run ni an organization's own priv
 **Magic Quadrant (MQ)** is a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends such as direction, maturity and participants.  
 
 You might have to pay to access the report, it's not public.
-![Gartner_mq_2023](/ccp/assets/gartner.png "Gartner diagram that summarizes all the information)
+![Gartner_mq_2023](/assets/gartner.png "Gartner diagram that summarizes all the information)
+
