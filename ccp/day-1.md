@@ -135,5 +135,5 @@ Infrastructure as Service software edployed to run ni an organization's own priv
 
 You might have to pay to access the report, it's not public.
 
-![Gartner_mq_2023](/assets/gartner.png "Gartner diagram that summarizes all the information")
+![Gartner_mq_2023](/ccp/assets/gartner.png "Gartner diagram that summarizes all the information")
 
