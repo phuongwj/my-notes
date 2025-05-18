@@ -134,5 +134,6 @@ Infrastructure as Service software edployed to run ni an organization's own priv
 **Magic Quadrant (MQ)** is a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends such as direction, maturity and participants.  
 
 You might have to pay to access the report, it's not public.
+
 ![Gartner_mq_2023](/assets/gartner.png "Gartner diagram that summarizes all the information)
 
