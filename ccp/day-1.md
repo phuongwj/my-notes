@@ -1,5 +1,5 @@
 # day-1
-before reading, i recommend you to switch to a light appearance, since it will make reading this easier.
+before reading, i recommend you to switch to a lighter appearance, since it will make reading this easier.
 
 
 ## 1. Cloud Concepts
