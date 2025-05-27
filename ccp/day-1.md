@@ -7,24 +7,24 @@ Cloud is a network of remote servers around the world that store data, run appli
 
 Cloud computing is all about accessing these resources over the internet (instead of a physical computer or server that you have to maintain yourself).
 
-#### Metaphor before diving into On-Premise and Cloud Providers
+### Metaphor before diving into On-Premise and Cloud Providers
 Imagine that you’re opening a bakery. You’d need a physical location, ovens, ingredients and employees. That’s a huge investment! Now, let’s say there’s a bakery service that provides all of these essentials without you having to own any of them. You just “pay as you bake.” That’s the cloud in a nutshell.
 
 Instead of investing in and maintaining a fleet of servers (which, by the way, take up tons of space, energy, and attention), you rent what you need, use it, and leave the maintenance to the cloud provider. This approach means you can “scale” (make or serve more) without additional investments, making your life much easier and your work far more flexible.
 
-#### On-Premise 
+### On-Premise 
 - You own the servers
 - You hire the IT people
 - You pay or rent the real-estate
 - You take all the risk
 
-#### Cloud Providers
+### Cloud Providers
 - Someone else owns the servers
 - Someone else hires the IT people
 - Someone else pays or rents the real-estate
 - You are responsible for configuring cloud services and code, someone else takes care of the rest
 
-#### Example
+### Example
 For instance, when you upload a photo to Instagram or stream a show on Netflix, you're accessing files that are stored in the cloud. Instagram and Netflix don't store all of that data on your phone or laptop - they rely on massive, secure cloud servers to hold it all.
 
 
@@ -42,14 +42,14 @@ Runs a single web-app/site.
 - **Pros:** High security
 - **Cons:** Very expensive, high maintenance
 
-#### Virtual Private Server (VPS)
+### Virtual Private Server (VPS)
 **One physical machine** dedicated **to a single business** but then our machine is virtualized **into sub-machines**.
 
 Runs multiple web-apps/sites.
 - **Pros:** Better Utilization and Isolation of Resources 
 - **Cons:** Still expensive
 
-#### Shared Hosting
+### Shared Hosting
 **One physical machine**, shared by **hundred of businesses**.
 
 Relies on most tenants under-utilizing their resources.
@@ -58,7 +58,7 @@ So you wouldn't have a sub-machine in there but you'd have a folder with permiss
 - **Pros:** Very cheap
 - **Cons:** Limited functionality, poor isolation
 
-#### Cloud Hosting
+### Cloud Hosting
 **Multiple physical machines** that act as one system.
 
 The system is abstracted into multiple **cloud services**.
@@ -66,7 +66,7 @@ The system is abstracted into multiple **cloud services**.
 
 
 
-### What is Amazon Web Services (AWS)?
+## What is Amazon Web Services (AWS)?
 
 A collection of Cloud Services that can be used together under a single unified API to build a lot of different kinds of workload. 
  
@@ -76,7 +76,7 @@ A collection of Cloud Services that can be used together under a single unified 
 
 
 
-### What is Cloud Service Provider (CSP)?
+## What is Cloud Service Provider (CSP)?
 
 A Cloud Service Provider (CSP) is a company which 
 - provides multiple cloud services e.g. tens to hundreds of services
@@ -100,7 +100,7 @@ Differences between Cloud Service Provider and Cloud Platform if you're wonderin
 
 
 
-### Landscape of CSPs
+## Landscape of CSPs
 
 **Tier-1 (Top Tier):**
 Early to market, wide offering, strong synergies between services, well recognized in the industry.
@@ -130,7 +130,7 @@ Infrastructure as Service software edployed to run ni an organization's own priv
 
 
 
-### Gartner Magic Quadrant for Cloud
+## Gartner Magic Quadrant for Cloud
 
 **Magic Quadrant (MQ)** is a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends such as direction, maturity and participants. You might have to pay to access the report, it's not public.
 
@@ -138,7 +138,7 @@ Infrastructure as Service software edployed to run ni an organization's own priv
 
 
 
-### Common Cloud Services
+## Common Cloud Services
 
 A cloud service provider **can have hundreds of cloud services** that are grouped into various types of services. The four most common types of cloud services (*the 4 core*) for Infrastructure as a Service (IaaS) would be:
 - Compute 
@@ -154,7 +154,7 @@ A cloud service provider **can have hundreds of cloud services** that are groupe
 
 
 
-### AWS Technology Overview
+## AWS Technology Overview
 
 CSPs that are IaaS will always have **4 core cloud service** offerings:
 - **Compute:** **EC2** Virtual Machines
@@ -165,9 +165,9 @@ CSPs that are IaaS will always have **4 core cloud service** offerings:
 
 
 
-### The Evolution of Computing
+## The Evolution of Computing
 
-#### Dedicated
+### Dedicated
 - A physical server wholly utilized by a single customer
 - You have to guess your capacity
 - You'll overpay for an underutlized server
@@ -178,7 +178,7 @@ CSPs that are IaaS will always have **4 core cloud service** offerings:
 - You have a *guarantee of security, privacy, and full utility of underlying resources*.
 
 
-#### Virtual Machines
+### Virtual Machines
 
 A **virtual machine (VM)** is a software-based simulation of a physical computer. It allows you to run an operating system and applications just like you would on a real computer, but it's all happening inside another system.
 
@@ -202,7 +202,7 @@ Lets say you have a completely overpowered computer with lots of RAM and lots of
 - Easy to Vertical or Horizontally scale
 
 
-#### Containers
+### Containers
 
 A container is a lightweight, portable, and isolated environment to run applications.
 
@@ -223,7 +223,7 @@ It packages your code, runtime, libraries, and dependencies together - so it run
 - Multiple apps can run side by side without being limited to the same OS requirements and will not cause conflicts during resource sharing
 
 
-#### Functions
+### Functions
 - Are managed VMs running managed containers
 - Known as **Serverless Compute**
 - You upload a piece of code, choose the amount of memory and duration
@@ -233,9 +233,9 @@ It packages your code, runtime, libraries, and dependencies together - so it run
 
 
 
-### Types of Cloud Computing
+## Types of Cloud Computing
 
-#### Software as a Service (SaaS) 
+### Software as a Service (SaaS) 
 Designed for **Customers**. 
 
 A product that is run and managed by the service provider.
@@ -247,7 +247,7 @@ A product that is run and managed by the service provider.
 - Gmail
 - Office 365 (Word, Excel, etc.)
 
-#### Platform as a Service (PaaS)
+### Platform as a Service (PaaS)
 Designed for **Developers**.
 
 Focus on the deployment and management of your apps.
@@ -259,7 +259,7 @@ Focus on the deployment and management of your apps.
 - Heroku
 - Google App Engine
 
-#### Infrastructure as a Service (IaaS)
+### Infrastructure as a Service (IaaS)
 Designed for **Administrators**
 
 The basic building blocoks for Cloud IT. Provides access to networking features, computers and data storage space.
@@ -273,16 +273,16 @@ The basic building blocoks for Cloud IT. Provides access to networking features,
 
 
 
-### Cloud Computing Deployment Models
+## Cloud Computing Deployment Models
 
-#### Public Cloud
+### Public Cloud
 **Everything** (the workload or project) is built on the CSP.
 
 Also known as: ***Cloud Native*** or ***Cloud First***.
 
 Imagine renting shared spaces in a massive online “building,” like AWS (Amazon Web Services), Microsoft Azure, or Google Cloud. Here, anyone can rent space or resources, and it’s great for flexibility and cost efficiency.
 
-#### Private Cloud
+### Private Cloud
 Everything built on company's data centers.
 
 Also known as: ***On-Premise***.
@@ -291,21 +291,21 @@ Picture your own bakery setup where only your team has access. Companies set up 
 
 The cloud could be **Open-Stack**.
 
-#### Hybrid Cloud
+### Hybrid Cloud
 Using both **On-Premise** and a **Cloud Service Provider**
 
 It’s like having a private room in a larger shared building, where you can access resources both privately and publicly, depending on your needs.
 
-#### Cross-Cloud
+### Cross-Cloud
 Using **Multiple Cloud PRovders**.
 
 Also known as: ***Multi-Cloud***.
 
 
 
-### Cloud Computing Deployment Models Use Cases
+## Cloud Computing Deployment Models Use Cases
 
-**Cloud**
+### Cloud
 
 Fully utilize cloud computing.
 
@@ -314,7 +314,7 @@ For: Companies that are starting out today, or are small enoguh to make the leap
 - SaaS offerings
 - New projects and companies 
 
-**Hybrid**
+### Hybrid
 
 Using both Cloud and On-Premise.
 
@@ -324,7 +324,7 @@ For: Organizations that started with their ow ndata center, can't fully move to 
 - Large Professional Service providers
 - Legacy on-premise
 
-**On-Premise**
+### On-Premise
 
 Deploying resources on-premises, using virtualization and resource management tools, is sometimes called *private cloud*.
 
