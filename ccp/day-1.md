@@ -7,7 +7,7 @@ Cloud is a network of remote servers around the world that store data, run appli
 
 Cloud computing is all about accessing these resources over the internet (instead of a physical computer or server that you have to maintain yourself).
 
-### Metaphor before diving into On-Premise and Cloud Providers
+### [Metaphor before diving into On-Premise and Cloud Providers]
 Imagine that you’re opening a bakery. You’d need a physical location, ovens, ingredients and employees. That’s a huge investment! Now, let’s say there’s a bakery service that provides all of these essentials without you having to own any of them. You just “pay as you bake.” That’s the cloud in a nutshell.
 
 Instead of investing in and maintaining a fleet of servers (which, by the way, take up tons of space, energy, and attention), you rent what you need, use it, and leave the maintenance to the cloud provider. This approach means you can “scale” (make or serve more) without additional investments, making your life much easier and your work far more flexible.
