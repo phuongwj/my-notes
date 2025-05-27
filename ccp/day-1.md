@@ -2,7 +2,9 @@
 before reading, i recommend you to switch to a lighter appearance, since it will make reading this easier.
 
 
+
 ## 1. Cloud Concepts
+
 
 
 ### What is Cloud Computing?
@@ -30,6 +32,7 @@ Instead of investing in and maintaining a fleet of servers (which, by the way, t
 
 #### Example
 For instance, when you upload a photo to Instagram or stream a show on Netflix, you're accessing files that are stored in the cloud. Instagram and Netflix don't store all of that data on your phone or laptop - they rely on massive, secure cloud servers to hold it all.
+
 
 
 ### The Evolution of Cloud Hosting
@@ -68,6 +71,7 @@ The system is abstracted into multiple **cloud services**.
 - **Pros:** Flexible, scalable, secure, cost-effective, high configurability
 
 
+
 ### What is Amazon Web Services (AWS)?
 
 A collection of Cloud Services that can be used together under a single unified API to build a lot of different kinds of workload. 
@@ -75,6 +79,7 @@ A collection of Cloud Services that can be used together under a single unified 
 - Simple Queue Service (SQS)
 - Simple Storage Service (S3)
 - Elastic Compute Cloud (EC2)
+
 
 
 ### What is Cloud Service Provider (CSP)?
@@ -98,6 +103,7 @@ If a company offers multiple cloud services under a single UI but do not meet mo
 Differences between Cloud Service Provider and Cloud Platform if you're wondering:
 - Cloud Service Provider: The company offering cloud services (AWS, Azure, GCP)
 - Cloud Platform: The environment/tools provided to build and deploy apps
+
 
 
 ### Landscape of CSPs
@@ -129,11 +135,13 @@ Infrastructure as Service software edployed to run ni an organization's own priv
 - *Vmware vSphere
 
 
+
 ### Gartner Magic Quadrant for Cloud
 
 **Magic Quadrant (MQ)** is a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends such as direction, maturity and participants. You might have to pay to access the report, it's not public.
 
 ![Gartner_mq_2023](/ccp/assets/gartner.png "Gartner diagram that summarizes all the information")
+
 
 
 ### Common Cloud Services
@@ -151,6 +159,7 @@ A cloud service provider **can have hundreds of cloud services** that are groupe
 => AWS has over **200+** cloud services. 
 
 
+
 ### AWS Technology Overview
 
 CSPs that are IaaS will always have **4 core cloud service** offerings:
@@ -159,6 +168,7 @@ CSPs that are IaaS will always have **4 core cloud service** offerings:
 - **Database:** **RDS** SQL databases
 - **Networking and Content Delivery:** **VPC** Private Cloud Network
 - etc.
+
 
 
 ### The Evolution of Computing
@@ -228,6 +238,7 @@ It packages your code, runtime, libraries, and dependencies together - so it run
 - Cold Starts is a side-effect of this setup
 
 
+
 ### Types of Cloud Computing
 
 #### Software as a Service (SaaS) 
@@ -267,6 +278,7 @@ The basic building blocoks for Cloud IT. Provides access to networking features,
 - Oracle Cloud
 
 
+
 ### Cloud Computing Deployment Models
 
 #### Public Cloud
@@ -294,6 +306,7 @@ It’s like having a private room in a larger shared building, where you can acc
 Using **Multiple Cloud PRovders**.
 
 Also known as: ***Multi-Cloud***.
+
 
 
 ### Cloud Computing Deployment Models Use Cases
