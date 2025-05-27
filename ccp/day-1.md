@@ -7,7 +7,7 @@ before reading, i recommend you to switch to a lighter appearance, since it will
 
 
 
-### What is Cloud Computing?
+## What is Cloud Computing?
 
 Cloud is a network of remote servers around the world that store data, run applications, and power services, so you don't have to. Think of it as renting a storage unit, except it's online, more flexible, and can do a lot more than just store things. 
 
@@ -35,7 +35,7 @@ For instance, when you upload a photo to Instagram or stream a show on Netflix, 
 
 
 
-### The Evolution of Cloud Hosting
+## The Evolution of Cloud Hosting
 
 Back then if you want to **host your website or web app**, you'd have to **get a dedicated server**.
 
