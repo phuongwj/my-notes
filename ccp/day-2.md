@@ -1,7 +1,5 @@
-# day-2
+# day-2 / Getting Started
 before reading, i recommend you to switch to a lighter appearance, since it will make reading this easier.
-
-## 2. Getting Started 
 
 1. Create an AWS Account and then sign-in.
 2. Go ahead and search IAM (aka Identity and Access Management) then click on it.
