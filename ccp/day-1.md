@@ -1,11 +1,5 @@
-# day-1
+# day-1 / Cloud Concepts
 before reading, i recommend you to switch to a lighter appearance, since it will make reading this easier.
-
-
-
-## 1. Cloud Concepts
-
-
 
 ## What is Cloud Computing?
 
