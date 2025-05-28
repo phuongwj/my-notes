@@ -73,3 +73,71 @@ before reading, i recommend you to switch to a lighter appearance, since it will
 
 
 ## Overbilling Story
+
+One of the major advantages of using AWS or any CSP, is that it utilizes metered billing, that is different from a fixed cost. 
+
+AWS will charge you based on how many hours, second, or other bunch of factors and so you're going to be able to get services at a **lower cost**. 
+
+However, if you choose an expensive service and you forget about it, or if there's a misconfiguration where you thought you were launching something that was cost-effective, but turned out to be expensive, you could end up with a large bill, very very quickly and that's a major concern for a lot of people. But don't worry, there are tools that will allow you to catch yourself if you happen to make that mistake. 
+
+### What to do when you set up a service and you suddenly gets a massive bill.
+
+When you're setting up a service in the settings section for that service, AWS usually have default values. Those default values usually are beneficial for you but could also be bad. Therefore you always have to checking the settings carefully. 
+
+Now say if you did not check and you end up getting a massive bill charged to your account, what you can do is navigate to the *Support Center* and go ahead and *Create a new support case*. 
++ AWS lets you have a free pass for the first time that you accidentally have a miss-spending, so it's okay. 
+
+
+
+## AWS Budgets
+
+Since we already have a story on overbilling, we'll go over steps to protect yourself from it. 
+
+Basically go to the search bar and type *Budgets*, it will then forward you to *Billing and Cost Management*.
++ Another way is by clicking on your username and just hit *Billing and Cost Management*. Then navigate to your sidebar, search *Budgets and Planning*, you'll also see *Budgets* there.
+
+Now you're there, you can basically *Create a Budget* based on what you want, for me I just do a Zero-Spend Budget. 
+
+
+
+## AWS Free Tier
+
+The free tier is something that is available for the first 12 months of a new AWS Account and allows you to utilize AWS Services without incurring any cost to you. 
+
+Therefore, if you want to utilize your free tier for the purpose of learning cloud, starting in cloud then you can go ahead and search *AWS Free Tier* in Google or just click on the link below:
+
+https://aws.amazon.com/free/?trk=fd8bc224-ba0b-4ee9-8595-152729dbd279&sc_channel=ps&ef_id=Cj0KCQjwxdXBBhDEARIsAAUkP6hOq2DDgsTZh_rsK5VNL8nDd8pa5AbMloIQQJPxpXXZbyOqSST_rfUaAt01EALw_wcB:G:s&s_kwcid=AL!4422!3!733981719008!p!!g!!aws%20pricing!22258831344!180520037452&gad_campaignid=22258831344&gbraid=0AAAAADjHtp8deRUgNXdziepcbrV2M7o7K&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6hOq2DDgsTZh_rsK5VNL8nDd8pa5AbMloIQQJPxpXXZbyOqSST_rfUaAt01EALw_wcB&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all
+
+And you'll get a page that explains all sorts of services.
+
+If you search *Billing preferences* and go to it, you'll be able to enable **AWS Free Tier Alerts** and **CloudWatch billing Alert** under the panel **Alert preferences**.
+
+This page will explain most of the things for you, be sure to check it out:
+**
+https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/tracking-free-tier-usage.html?icmpid=docs_billing_hp-freetier
+
+
+
+## Billing Alarm
+
+Another way that we can monitor our spend, it is through *Billing Alert* or *Billing Alarm*. 
+
+> **Aside - To make sure everything works:**
+> Make sure you have enabled **CloudWatch billing Alert** mentioned under **AWS Free Tier** section, and that's it.
+
+You can now search up *CloudWatch*. Once your there, go to your sidebar and expand *Alarms*, you can then go ahead and click *Billing* then hit *Create alarm*. 
++ You should be careful that AWS does charge you for setting up these kinds of alarms, so it's good to be aware of it.
+
+For me personally I don't need to create a Billing Alarm, so I'll just leave the process up to you to search if you want to create one. 
+
+But yeah I'm giving some information on it here just to let you know tools like that exist, and are helpful.
+
+
+
+## Turning on MFA
+
+One of the strongest recommendation that AWS gives you is to set MFA on your AWS root user account.
+
+Now make sure you're logged into your AWS root user account.
+
+Make your way to IAM and just go ahead make an MFA for your root user.
