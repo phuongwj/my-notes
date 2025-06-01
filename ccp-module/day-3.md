@@ -15,7 +15,7 @@ Each awve irreversibly changes the society on a global scale. The idea here bein
 
 This is a common pattern of a wave change of **supply** and **demand**:
 
-![Wave pattern](/ccp/assets/wave-pattern.png "Common pattern of a wave")
+![Wave pattern](/ccp-module/assets/wave-pattern.png "Common pattern of a wave")
 
 So if we're seeing this, we know that we are in a wave and where we are in a wave.
 
