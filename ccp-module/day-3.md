@@ -9,7 +9,7 @@ When we're talking about **Innovation Waves**, we're talking about **Kondratiev 
 
 The phenomenno is closely connected with Technology life cycles. 
 
-![Kondratiev waves](/ccp/assets/wave.png "Kondratiev waves")
+![Kondratiev waves](/ccp-module/assets/wave.png "Kondratiev waves")
 
 Each awve irreversibly changes the society on a global scale. The idea here being said is that the latest wave is **Cloud Technology**, or other things like ML/AI but maybe they're all part of the same waves or separate waves, but general they're broken up based on the **PRDE**
 
