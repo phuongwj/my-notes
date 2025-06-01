@@ -1,4 +1,5 @@
 # day-3 / Digital Transformation, The Benefits of Cloud
+before reading, i recommend you to switch to a lighter appearance, since it will make reading this easier.
 
 # Digital Transformation
 
