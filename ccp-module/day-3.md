@@ -230,3 +230,28 @@ For these global services at the time of creation:
 - A single region must be explicitly chosen e.g. S3 Bucket.
   + You actually have to select a region at time of creation.
 - A group of regions are chosen e.g. CloudFront Distribution
+
+
+
+## Availability Zones (AZs)
+
+An Availability Zone (AZ) is physical location made up of one or more data center.
+
+A data center is a secured building that contains hundreds of thousands of computers. 
+
+A region will **generally** contain **3 Availability Zones**.
+> Here, we're saying *generally* because there are some cases where we will see less than 3, so there might be 2.
+
+Data centers within a region will be isolate from each other (different buildings). But they will be close enough to provide low-latency (< 10 ms).
+
+It's common practice to run workloads in at least 3 AZs to ensure services remain available in case one or two data centers fail. (High availability).
+
+AZs are represented by a Region Code, followed by a letter identifer e.g. **us-east-1a**.
+
+### Summary Table for clearer view:
+
+| Concept      | Description                                               | Example
+| ------------ | --------------------------------------------------------- | -------------------------------------------
+| Region       | Geographic area containing multiple AZs                   | US East (N. Virginia), Asia Pacific (Tokyo)
+| AZ           | Logical group of 1+ data centers, isolated but connected  | us-east-1a, us-east-1b
+| Data Center  | Physical building with servers, networking, storage       | Actual building in a city
