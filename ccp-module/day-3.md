@@ -256,4 +256,6 @@ AZs are represented by a Region Code, followed by a letter identifer e.g. **us-e
 | AZ           | Logical group of 1+ data centers, isolated but connected  | us-east-1a, us-east-1b
 | Data Center  | Physical building with servers, networking, storage       | Actual building in a city
 
+A Subnet is associated with an Availability Zone.
 
+You never choose the AZ when launching resources. You choose the Subnet which is associated to the AZ.
