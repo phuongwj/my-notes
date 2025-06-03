@@ -248,14 +248,46 @@ It's common practice to run workloads in at least 3 AZs to ensure services remai
 
 AZs are represented by a Region Code, followed by a letter identifer e.g. **us-east-1a**.
 
+A Subnet is associated with an Availability Zone.
+
+You never choose the AZ when launching resources. You choose the Subnet which is associated to the AZ (i.e. you choose `us-east-1a`, `us-east-1b`, `us-east-1c`, etc.).
+
+A lot of services don't even require you to choose a subnet because they're fully managed by AWS. However, in cases like virtual machines, you're always choosing a subnet.
+
+Example of an architectural diagram, representing two AZs, the Subnets associated with those AZs, and EC2 instances (Virtual Machines) launched in those subnetes.
+
+![Example of an Architectural Diagram mentioned above](/ccp-module/assets/azs-with-subnets.jpg "Example of an Architectural Diagram mentioned above")
+
 ### Summary Table for clearer view:
 
 | Concept      | Description                                               | Example
 | ------------ | --------------------------------------------------------- | -------------------------------------------
 | Region       | Geographic area containing multiple AZs                   | US East (N. Virginia), Asia Pacific (Tokyo)
-| AZ           | Logical group of 1+ data centers, isolated but connected  | us-east-1a, us-east-1b
+| AZ           | Logical group of 1+ data centers, isolated but connected  | us-east, us-west
 | Data Center  | Physical building with servers, networking, storage       | Actual building in a city
 
-A Subnet is associated with an Availability Zone.
+### Visualization Representation:
 
-You never choose the AZ when launching resources. You choose the Subnet which is associated to the AZ.
+- Say we have a AWS Region and in this particular one, we have Canada (Central), which is Montreal => `ca-central-1`.
+
+![Visualization Representation part1](/ccp-module/assets/repre-1.jpg "Visualization Representation part1")
+
+- The idea here is that the region has multiple AZs, they are `ca-central-1a`, `ca-central-1b`, `ca-central-1d`.
+
+![Visualization Representation part2](/ccp-module/assets/repre-2.jpg "Visualization Representation part2")
+
+- Within our AZs, they are made up of **one or more** data centers, not a single data centers, but a collection of buildings. 
+
+![Visualization Representation part3](/ccp-module/assets/repre-3.jpg "Visualization Representation part3")
+
+- All AZs in an AWS Region are interconnected with high-bandwidth, low-latency networking, over fully redundant, dedicated metro fiber providing high-throughput, low-latency networking between (basically means very fast connection in between).
+
+![Visualization Representation part4](/ccp-module/assets/repre-4.jpg "Visualization Representation part4")
+
+- All traffic between AZs is encrypted. 
+
+- AZs are within 100km (60 miles) of each other.
+
+![Visualization Representation part5](/ccp-module/assets/repre-5.jpg "Visualization Representation part5")
+
+
