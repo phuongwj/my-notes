@@ -291,3 +291,53 @@ Example of an architectural diagram, representing two AZs, the Subnets associate
 ![Visualization Representation part5](/ccp-module/assets/repre-5.jpg "Visualization Representation part5")
 
 
+
+## Selecting Regions and AZs Follow Along
+
+You can check out the portion 2:18:32 til 2:22:04 in the video to see how Andrew did it. The current UI that you have right now with AWS might be a bit different from his video, but still you can check out his video to get the general idea. Everything except for the UI should mostly be the same.
+
+
+
+## Fault Tolerance
+
+### What is a fault domain?
+
+A fault domain is a section of a network that is vulnerable to damage if a critical device or system fails. The purpose of a fault domain is that if a failure occurs **it will not cascade outside that domain**, limiting the damage possible. 
+
+> So this is generally fine, because they know that this is a **fault domain** and nothing outside of this room is going to be affected.
+
+You can have fault domains nested inside fault domains.
+
+### What is a fault level?
+
+A fault level is a collection of fault domains.
+
+The scope of a fault domain could be:
+- specific servers in a rack
+- an entire rack in a data center
+- an entire room in a daat center
+- the entire data center builing
+It's up to the Cloud Service Provider (CSPs) to define the boundaries of a domain. AWS abstracts it all away so you don't have to think about it. But just to compare it against Azure, you actually define your fault domain. You might say that "make sure this workload is never running on the same VM on the same rack for these things", and you might like that level of control.
+
+![Fault Level & Fault Domain Example](/ccp-module/assets/fault-ex.jpg "Fault Level & Fault Domain Example")
+
+Data centers can also have fault domains within them. Maybe that have one particular room and that room is secure, so like if there's fire in that room, it's not going to affect the other rooms. 
+
+Each Amazon Region is designed to be completely **isolated** from the other Amazon Regions.
+- This achieves the greatest possible fault tolerance and stability.
+
+Each AZ is **isolated**, but the AZs in a Region are connected through low-latency links.
+
+Each AZ is designed as an **independent failure zone**.
+> A *"Failure Zone"* is AWS describing a *Fault Domain*.
+
+### Failure Zone
+- AZs are physically separated within a typical metropolitan region and are located in lower risk flood plains.
+- Discrete uninterruptible power supply (UPS) and onsite backup generation facilities.
+- Data centers located in different AZs are designd to be supplied by independent substations to reduce the risk of an event on the power grid impacting more than one AZ. 
+- AZs are all redundantly connected to multiple tier-1 transit providers. 
+
+### Multi-AZ for High Availability
+
+If an application is partitioned across AZs, companies are better isolated and protected from issues such as **power outages, lightning strikes, tornadoes, earthquakes**, and more.
+> This is the reason why we want to run in multiple AZs, it is simply because of **fault domain**.
