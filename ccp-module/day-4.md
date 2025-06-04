@@ -39,3 +39,34 @@ Examples:
 Ensuring your resources stay within the AWS Network and do no traverse over the Public Internet (i.e. if you have a resource running in `us-east-1` and 1 in `eu` and they never have to go to the Internet, it would make sense to always enforce it to stay within the AWS Network because it's going to be a lot faster).
 
 ## Points of Presence (PoP)
+
+### Points of Presence (PoP)
+
+An intermediate location between an AWS Region and the end user, and this locatino could be a data center or collection of hardware. 
+
+### AWS Point of Presence
+
+For **AWS**, a Point of Presence is a data center **owned by AWS or a trusted partner** that is utilized by AWS Services related ==**for content delivery or expediated upload**==.
+
+**PoP resources are:**
+- Edge Locations
+- Regional Edge Caches
+
+Example: 
+![Example of an AWS PoP](/ccp-module/assets/pop.jpg "Example of an AWS PoP")
+
+We're seeing an *"S3 Bucket"*, and it has to go through a *"Regional Edge Cache"*, then get to an *"Edge Location"*. 
+
+### Edge Locations
+
+**Edge Locations** are data centers that hold cached (copy) on he most popylar files (e.g. web pages, images and videos) so that the delivery of distance to the end users are reduced.
+
+### Regional Edge Locations
+
+**Regional Edge Locations** are data enters that hold much larger caches of less-popular files to reduce a full roundtrip and also to reduce the cost of transfer fees.
+
+
+
+## Tier 1
+
+to be continued.
