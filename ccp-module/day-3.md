@@ -1,4 +1,4 @@
-# day-3 / Digital Transformation, The Benefits of Cloud, AWS Global Infrastructure
+# day-3 / Digital Transformation, The Benefits of Cloud, AWS Global Infrastructure part 1
 before reading, i recommend you to switch to a lighter appearance, since it will make reading this easier.
 
 # Digital Transformation
@@ -7,11 +7,11 @@ before reading, i recommend you to switch to a lighter appearance, since it will
 
 When we're talking about **Innovation Waves**, we're talking about **Kondratiev waves** (aka Innovation Waves or K-Waves) are hypothesized cycle-like phenomena in the global world economy.
 
-The phenomenno is closely connected with Technology life cycles. 
+The phenomenon is closely connected with Technology life cycles. 
 
 ![Kondratiev waves](/ccp-module/assets/wave.png "Kondratiev waves")
 
-Each awve irreversibly changes the society on a global scale. The idea here being said is that the latest wave is **Cloud Technology**, or other things like ML/AI but maybe they're all part of the same waves or separate waves, but general they're broken up based on the **PRDE**
+Each wave irreversibly changes the society on a global scale. The idea here being said is that the latest wave is **Cloud Technology**, or other things like ML/AI but maybe they're all part of the same waves or separate waves, but general they're broken up based on the **PRDE**
 
 This is a common pattern of a wave change of **supply** and **demand**:
 
@@ -140,7 +140,7 @@ References: https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-adva
 
 
 
-# AWS Global Infrastructure
+# AWS Global Infrastructure part 1
 
 ## AWS Global Infrastructure Overview
 
