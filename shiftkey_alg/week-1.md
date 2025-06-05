@@ -46,5 +46,17 @@ HashSet and HashMap have the same structure, but the value and the key for the H
 
 ## Practice Question
 
-- 1. Two Sum
-- 167. Two Sum II - Input Array is Sorted
+1. Two Sum
+167. Two Sum II - Input Array is Sorted
+26. Remove Duplicates from Sorted Array
+141. LinkedList Cycle
+3. Longest Substring Without Repeating Characters
+1732. Find the Highest Altitude
+724. Find Pivot Index
+9. Palindrome Number
+
+## Two Pointers
+## Two Pointers (fast and slow)
+- Use fast and slow pointer (Floyd cycle detection)
+## Sliding Window
+## Prefix Sum
