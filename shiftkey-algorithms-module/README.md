@@ -15,7 +15,7 @@ What ShiftKey Labs offer:
 - Co-Working Space
 - Networking opportunities
 
-You can check out ShiftKey Labs [here](https://shiftkeylabs.ca/)
+You can learn more about ShiftKey Labs [here](https://shiftkeylabs.ca/)
 
 ## About the Intro to Algorithmic Problem Solving Course
 
