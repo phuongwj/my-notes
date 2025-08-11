@@ -127,18 +127,18 @@ A collection of Cloud Services that can be used together under a single unified 
 ## What is Cloud Service Provider (CSP)?
 
 A Cloud Service Provider (CSP) is a company which 
-- provides multiple cloud services e.g. tens to hundreds of services
-- those Cloud Services **can be chained together** to create cloud architectures
-- those Cloud Services are accessible **via Single Unified API** eg. AWS API
-- those Cloud Services utilized **metered billing** based on usage e.g. per second, per hour
-- those Cloud Services have rich monitoring built in eg. AWS CloudTrail 
-- those Cloud Services have an Infrastructure as a Service (IaaS) offering, that means they have things like:
-  + networking
-  + compute
-  + storage
-  + databases
-- those Cloud Services offers **automation** via Infrastructure as Code (IaC) 
-  + which means you can write code to set everything up 
+- Provide multiple cloud services e.g. tens to hundreds of services
+- Those Cloud Services **can be chained together** to create cloud architectures
+- Those Cloud Services are accessible **via Single Unified API** eg. AWS API
+- Those Cloud Services utilized **metered billing** based on usage e.g. per second, per hour
+- Those Cloud Services have rich monitoring built in eg. AWS CloudTrail 
+- Those Cloud Services have an Infrastructure as a Service (IaaS) offering, that means they have things like:
+  + Networking
+  + Compute
+  + Storage
+  + Databases
+- Those Cloud Services offers **automation** via Infrastructure as Code (IaC) 
+  + Which means you can write code to set everything up 
 
 If a company offers multiple cloud services under a single UI but do not meet most of or all of these requirements, it would be referred to as a Cloud Platform e.g. Twilio, HashiCorp, Databricks. 
 
