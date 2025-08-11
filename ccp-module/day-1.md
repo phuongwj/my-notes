@@ -1,5 +1,55 @@
 # day-1 / Cloud Concepts
-before reading, i recommend you to switch to a lighter appearance, since it will make reading this easier.
+
+<!-- Appendix -->
+
+- [What is Cloud Computing?](#what-is-cloud-computing)
+  + [Metaphor before diving into On-Premise and Cloud Providers](#metaphor-before-diving-into-on-premise-and-cloud-providers)
+  + [On-Premise](#on-premise)
+  + [Cloud Providers](#cloud-providers)
+  + [Example](#example)
+
+- [The Evolution of Cloud Hosting](#the-evolution-of-cloud-hosting)
+  + [Dedicated Server](#dedicated-server)
+  + [Virtual Private Server (VPS)](#virtual-private-server-vps)
+  + [Shared Hosting](#shared-hosting)
+  + [Cloud Hosting](#cloud-hosting)
+
+- [What is Amazon Web Services (AWS)?](#what-is-amazon-web-services-aws)
+
+- [What is Cloud Service Provider (CSP)?](#what-is-cloud-service-provider-csp)
+
+- [Landscape of CSPs](#landscape-of-csps)
+
+- [Gartner Magic Quadrant for Cloud](#gartner-magic-quadrant-for-cloud)
+
+- [Common Cloud Services](#common-cloud-services)
+
+- [AWS Technology Overview](#aws-technology-overview)
+
+- [The Evolution of Computing](#the-evolution-of-computing)
+  + [Dedicated](#dedicated)
+  + [Virtual Machines](#virtual-machines)
+  + [Containers](#containers)
+  + [Functions](#functions)
+
+- [Types of Cloud Computing](#types-of-cloud-computing)
+  + [Software as a Service (SaaS)](#software-as-a-service-saas)
+  + [Platform as a Service (PaaS)](#platform-as-a-service-paas)
+  + [Infrastructure as a Service (IaaS)](#infrastructure-as-a-service-iaas)
+
+- [Cloud Computing Deployment Models](#cloud-computing-deployment-models)
+  + [Public Cloud](#public-cloud)
+  + [Private Cloud](#private-cloud)
+  + [Hybrid Cloud](#hybrid-cloud)
+  + [Cross Cloud](#cross-cloud)
+
+
+- [Cloud Computing Deployment Models](#cloud-computing-deployment-models-use-cases)
+  + [Cloud](#cloud)
+  + [Hybrid](#hybrid)
+  + [On-Premise](#on-premise-1)
+
+
 
 ## What is Cloud Computing?
 
