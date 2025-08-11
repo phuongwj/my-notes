@@ -54,7 +54,7 @@ Runs multiple web-apps/sites.
 
 Relies on most tenants under-utilizing their resources.
 
-So you wouldn't have a sub-machine in there but you'd have a folder with permissions taht you could use, so you get to share the cost.
+So you wouldn't have a sub-machine in there but you'd have a folder with permissions that you could use, so you get to share the cost.
 - **Pros:** Very cheap
 - **Cons:** Limited functionality, poor isolation
 
@@ -82,7 +82,7 @@ A Cloud Service Provider (CSP) is a company which
 - provides multiple cloud services e.g. tens to hundreds of services
 - those Cloud Services **can be chained together** to create cloud architectures
 - those Cloud Services are accessible **via Single Unified API** eg. AWS API
-- those Cloud Services utilized **metered billing** based on suage e.g. per second, per hour
+- those Cloud Services utilized **metered billing** based on usage e.g. per second, per hour
 - those Cloud Services have rich monitoring built in eg. AWS CloudTrail 
 - those Cloud Services have an Infrastructure as a Service (IaaS) offering, that means they have things like:
   + networking
@@ -123,7 +123,7 @@ Virtual Private Servers (VPS) turned to offer core IaaS offering. Simple, cost-e
 - Akamai Connected Cloud (Linode)
 
 **Tier-4 (Private Tier):**
-Infrastructure as Service software edployed to run ni an organization's own private data center
+Infrastructure as Service software deployed to run ni an organization's own private data center
 - OpenStack (Rackspace)
 - Apache CloudStack
 - *Vmware vSphere
@@ -144,7 +144,7 @@ A cloud service provider **can have hundreds of cloud services** that are groupe
 - Compute 
   + Imagine having a virtual computer that can run application, programs and code.
 - Networking
-  + Imagine having virtual network defining internet connections or network isolations between services or outbound to the internet.
+  + Imagine having virtual network defining internet connections or network isolation between services or outbound to the internet.
 - Storage
   + Imagine having a virtual hard-drive that can store files.
 - Databases
@@ -170,7 +170,7 @@ CSPs that are IaaS will always have **4 core cloud service** offerings:
 ### Dedicated
 - A physical server wholly utilized by a single customer
 - You have to guess your capacity
-- You'll overpay for an underutlized server
+- You'll overpay for an underutilized server
 - You can't vertical scale, you need a manual migration
 - Replacing a server is very difficult
 - Limited by your Host Operating system
@@ -217,7 +217,7 @@ It packages your code, runtime, libraries, and dependencies together - so it run
 => Containers give you tiny, efficient app environments inside that computer
 
 - Virtual Machine running multiple containers
-- **Docker Deamon** is the name of the software layer that lets you run multiple containers
+- **Docker Daemon** is the name of the software layer that lets you run multiple containers
 - You can maximize the utilize of the available capacity which is more cost-effective
 - Your containers share the same underlying OS so containers are more efficient than multiple VMs
 - Multiple apps can run side by side without being limited to the same OS requirements and will not cause conflicts during resource sharing
@@ -262,7 +262,7 @@ Focus on the deployment and management of your apps.
 ### Infrastructure as a Service (IaaS)
 Designed for **Administrators**
 
-The basic building blocoks for Cloud IT. Provides access to networking features, computers and data storage space.
+The basic building blocks for Cloud IT. Provides access to networking features, computers and data storage space.
 
 **Idea:** Don't worry about IT staff, data centers and hardware.
 
@@ -297,7 +297,7 @@ Using both **On-Premise** and a **Cloud Service Provider**
 It’s like having a private room in a larger shared building, where you can access resources both privately and publicly, depending on your needs.
 
 ### Cross-Cloud
-Using **Multiple Cloud PRovders**.
+Using **Multiple Cloud Providers**.
 
 Also known as: ***Multi-Cloud***.
 
@@ -309,7 +309,7 @@ Also known as: ***Multi-Cloud***.
 
 Fully utilize cloud computing.
 
-For: Companies that are starting out today, or are small enoguh to make the leap from VPS to a CSP.
+For: Companies that are starting out today, or are small enough to make the leap from VPS to a CSP.
 - Startups
 - SaaS offerings
 - New projects and companies 
@@ -318,7 +318,7 @@ For: Companies that are starting out today, or are small enoguh to make the leap
 
 Using both Cloud and On-Premise.
 
-For: Organizations that started with their ow ndata center, can't fully move to cloud due to effort of migration or security compliance
+For: Organizations that started with their own data center, can't fully move to cloud due to effort of migration or security compliance
 - Banks
 - FinTech, Investment Management
 - Large Professional Service providers
@@ -328,7 +328,7 @@ For: Organizations that started with their ow ndata center, can't fully move to 
 
 Deploying resources on-premises, using virtualization and resource management tools, is sometimes called *private cloud*.
 
-For: Organizatinos that cannot run on cloud due to strict regulatory compliance or the sheer size of their organization
+For: Organizations that cannot run on cloud due to strict regulatory compliance or the sheer size of their organization
 - Public Sector e.g. Government
 - Super Sensitive Data e.g. Hospital
 - Large Enterprise with heavy regulation e.g. Insurance Companies
