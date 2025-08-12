@@ -1,6 +1,6 @@
 # day-2 / Getting Started
 
-> **Note:** The AWS Console changes frequently. For the most up-to-date experience, consider watching a video walkthrough or learn how to navigate the platform yourself instead of following written steps. The notes below summarize the key actions for reference following the [freeCodeCamp YouTube video by Andrew Brown)](https://youtu.be/NhDYbskXRgc?si=2Z1vXtbBOjYzqSCV) with slight adjustments to match the 2025 UI.
+> **Note:** The AWS Console changes frequently. For the most up-to-date experience, consider watching a video walkthrough or learn how to navigate the platform yourself instead of following written steps. The notes below summarize the key actions for reference following the [freeCodeCamp YouTube video by Andrew Brown)](https://youtu.be/NhDYbskXRgc?si=2Z1vXtbBOjYzqSCV) with slight adjustments to match the 2025 UI, duration of contents will be from 01:19:34 to 1:52:15
 
 
 
