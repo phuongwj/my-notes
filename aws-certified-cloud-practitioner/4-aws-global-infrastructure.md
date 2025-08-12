@@ -1,146 +1,6 @@
-# day-3 / Digital Transformation, The Benefits of Cloud, AWS Global Infrastructure part 1
-before reading, i recommend you to switch to a lighter appearance, since it will make reading this easier.
+# AWS Global Infrastructure
 
-# Digital Transformation
 
-## Innovation Waves 
-
-When we're talking about **Innovation Waves**, we're talking about **Kondratiev waves** (aka Innovation Waves or K-Waves) are hypothesized cycle-like phenomena in the global world economy.
-
-The phenomenon is closely connected with Technology life cycles. 
-
-![Kondratiev waves](/aws-certified-cloud-practitioner/assets/wave.png "Kondratiev waves")
-
-Each wave irreversibly changes the society on a global scale. The idea here being said is that the latest wave is **Cloud Technology**, or other things like ML/AI but maybe they're all part of the same waves or separate waves, but general they're broken up based on the **PRDE**
-
-This is a common pattern of a wave change of **supply** and **demand**:
-
-![Wave pattern](/aws-certified-cloud-practitioner/assets/wave-pattern.jpg "Common pattern of a wave")
-
-So if we're seeing this, we know that we are in a wave and where we are in a wave.
-
-
-
-## Burning Platform
-
-**Burning Platform** is a term used when a company abandons old technology for new technology with the uncertainty of success and can be motivated by fear that the organization future survival hinges no its **digital transformation**.
-
-
-
-## Digital Transformation Checklist 
-
-You can get to this website by either searching "Digital Transformation Checklist", then it'll lead you to the "Public Sector Digital Transformation" page and you'll be able to get the pdf (however, as of the current time I'm writing this note, the pdf has been archived!).
-
-
-
-## Evolution of Computing Power
-
-### What is Computing Power?
-
-The throughout measured at which a computer can complete a computational task. A few examples of computing:
-
-- General Computing
-- GPU Computing 
-- Quantum Computing 
-
-The idea is we're not done with the evolution of computing power, things are going to geta lot faster once we solve things. 
-
-### AWS Service Offering
-
-- Elastic Compute Cloud EC2.
-- AWS Inferentiare (Inf1).
-- AWS Brakcet (for this one, you can actually use Quantum Computing as a service).
-
-
-
-## Amazon Bracket
-
-You can use Quantum Computing on AWS! It is accessible. You just need to sign-in to AWS console and search *Bracket* then you'll be making your way over to something called *Amazon Bracket*.
-
-On the side bar, you can set up *Quantum tasks* then do further stuffs if you need.
-
-
-
-# The Benefits of Cloud 
-
-The benefits of the cloud is a summary of reasons why an organization would consider adopting or migrating to utilizing public cloud.
-
-- **Agility:** Increase speed and agility.
-- **Pay-as-you-go pricing:** Trade capital expense for variable expense.
-- **Economy of scale:** Benefit from massive economies of scale.
-- **Global Reach:** Go global in minutes.
-- **Security**
-- **Reliability:** Stop spending money on running and maintaining data centers.
-- **High Availability**
-- **Scalability:** Benefit from massive economies of scale.
-- **Elasticity**
-- **Fault tolerance**
-- **Disaster Recovery**
-
-**The Benefits of Cloud** is a reworking and expansion of the **Six Advantages of Cloud**.
-
-
-
-## The Six Advantages of Cloud 
-
-1. Trade capital expense for variable expense.
-
-    You can **Pay-On-Demand** meaning there is no upfront-cost and you pay for only what you consume or pay by the hour, minutes or seconds. *Instead of paying for upfront costs of data centerse and servers*.
-
-2. Benefit from massive economies of scale.
-
-    You are **sharing the cost with other customers** to get unbeatable savings. *Hundreds of thousands of customers utilizing a fraction of a server*.
-
-3. Stop guessing capacity.
-
-    **Scale up or down** to meet the current need. Launch and destroy services whenever. *Instead of paying for idle or underutilized servers*.
-
-4. Increase speed and agility.
-
-    **Launch resources within a few clicks in minutes** *instead of waiting days or weeks of your IT to implement the solution on-premise.
-
-5. Stop spending money on running and maintaining data centers.
-
-    **Focus on your own customers**, developing and configuring your applications. *Instead of operations such as of racking, stacking, and powering servers*.
-
-6. Go global in minutes.
-
-    **Deploy your app in multiple regions around the world with a few clicks*.
-    Provide lower latency and a better experience for your customers at minimal cost.
-
-References: https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html
-
-
-
-## The Seven Advantages of Cloud
-
-- Cost-effective: 
-
-    You **pay for what you consume**, **no up-front cost**. On-demand pricing or Pay-as-you-go (PAYG) with thousands of customers sharing the cost of the resources.
-
-- Global:
-
-    Launch workloads **anywhere in the world**. Just choose a region.
-
-- Secure:
-
-    Cloud provider takes care of physical security. **Cloud services can be secure by default** or you have the ability to configure access down to a granular level.
-
-- Reliable:
-
-    Data backup, disaster recovery, data replication, and fault tolerance.
-
-- Scalable:
-
-    Increase or decrease resources and services based on demand.
-
-- Elastic:
-
-    **Automate** scaling during spikes and drop in demand.
-
-
-
-# AWS Global Infrastructure part 1
 
 ## AWS Global Infrastructure Overview
 
@@ -341,3 +201,181 @@ Each AZ is designed as an **independent failure zone**.
 
 If an application is partitioned across AZs, companies are better isolated and protected from issues such as **power outages, lightning strikes, tornadoes, earthquakes**, and more.
 > This is the reason why we want to run in multiple AZs, it is simply because of **fault domain**.
+
+
+
+## AWS Global Network
+
+The AWS Global Network represent the **interconnections between AWS Global Infrastructure**. Commonly referred to as *"The Backbone of AWS"*.
+
+Think of it as private express way, where things can move very fast between data centers. 
+
+One thing that's utilized a lot to get data in and out of AWS very quickly is **Edge Locations**.
+
+### Edge Locations
+
+Can act as **on and off ramps** to the AWS Global Network. 
+
+#### On ramps
+
+Uses Edge Locations as an **on-ramp** to quickly reach AWS resources in other regions by traversing the fast AWS Global Network.
+
+Examples:
+- AWS Global Accelerator
+- AWS S3 Transfer Acceleration 
+
+> Notice the names, they're like *"Accelerator"*, *"Accelerations"*, the idea here is that they are moving very fast.
+
+#### Off ramps 
+
+Uuses Edge Locations as an **off-ramp** to provide at the Edge storage and compute near the end user.
+
+Examples:
+- Amazon CloudFront (CDN) (for context, it's a content distribution network)
+
+#### VPC Endpoints
+
+> Another thing that is kind of always utilized in the Global Network
+> Doesn't use Edge Locations
+
+Ensuring your resources stay within the AWS Network and do no traverse over the Public Internet (i.e. if you have a resource running in `us-east-1` and 1 in `eu` and they never have to go to the Internet, it would make sense to always enforce it to stay within the AWS Network because it's going to be a lot faster).
+
+## Points of Presence (PoP)
+
+### Points of Presence (PoP)
+
+An intermediate location between an AWS Region and the end user, and this location could be a data center or collection of hardware. 
+
+### AWS Point of Presence
+
+For **AWS**, a Point of Presence is a data center **owned by AWS or a trusted partner** that is utilized by AWS Services related **for content delivery or expediated upload**.
+
+**PoP resources are:**
+- Edge Locations
+- Regional Edge Caches
+
+Example: 
+
+![Example of an AWS PoP](/ccp-module/assets/pop.jpg "Example of an AWS PoP")
+
+We're seeing an *"S3 Bucket"*, and it has to go through a *"Regional Edge Cache"*, then get to an *"Edge Location"*. 
+
+### Edge Locations
+
+**Edge Locations** are data centers that hold cached (copy) on he most popylar files (e.g. web pages, images and videos) so that the delivery of distance to the end users are reduced.
+
+### Regional Edge Locations
+
+**Regional Edge Locations** are data enters that hold much larger caches of less-popular files to reduce a full roundtrip and also to reduce the cost of transfer fees.
+
+
+
+## Tier 1
+
+![tier diagram](/ccp-module/assets/tier-dia.jpg "tier diagram")
+
+As you can see, PoPs live at the edge/**intersection** of two networks.
+
+So we can see that there's a PoP that's between Tier 2 Networks and Tier 3 Networks as an example.
+
+**Tier 1 network** is a network that can reach every other network on the Internet **without purchasing IP transit or paying for peering**.
+
+AWS AZs are all redundantly connected to multiple **tier-1 transit providers**.
+
+
+
+## AWS Services using PoPs
+
+The following AWS Services use PoPs **for content delivery or expediated upload**.
+
+### Amazon Cloudfront 
+
+A **Content Delivery Network (CDN) service** that:
+- You point your website to CloudFront so that it will route requests to nearest Edge Location cache. 
+- Allows you to choose an **origin** (such as a web-server or storage) that will be source of cached.
+- Caches the contents of what origin would returned to various Edge Locations around the world.
+
+## Amazon S3 Transfer Acceleration 
+
+Allows you to generate a special URL that can be used by end users to upload files to a nearby Edge Location. Once a file is uploaded to an Edge Location, it can move much faster within the AWS Network to reach S3. 
+
+## AWS Global Accelerator
+
+Can find the optimal path from the end user to your web-servers. Global Accelerator are deployed within Edge Locations so you send user traffic to an Edge Location instead of directly to your web application.
+
+> Let's say you're running a web server in `us-east-1`, and you just don't have the time to set up infrastructure in other regions. You can turn this on and you'll basically get a boost. 
+
+
+
+## AWS Direct Connect
+
+A **private/dedicated connection between your data center, office, co-location and AWS**. 
+> AWS mention that the connection is private, but that doesn't mean that it's secure. We'll talk about this once we've reached VPN, to make sure our connections are secure.
+> A co-location (aka carrier-hotel) is a data center where equipment, space, and bandwidth are available for rental to retail customers.
+
+![direct connect example diagram](/ccp-module/assets/direct-con.jpg "direct connect example diagram")
+
+Imagine you have a direct fiber cable that connects your data center to AWS. It’s like using your local servers - everything feels fast and smooth, with almost no delay.
+
+**Direct Connect** has two **very-fast network** connection options:
+1. Lower Bandwidth **50MBps - 500MBps**
+2. Higher Bandwidth **1GBps or 10GBps**
+
+Therefore, **Direct Connect**:
+- Helps **reduce network costs** and **increase bandwidth throughput** (great for high traffic networks).
+- Provides **a more consistent network experience** than a typical internet-based connection (reliable and secure).
+
+
+
+## Direct Connect Locations
+
+**Direct Connect Locations** are **trusted partnered data centers** that you can establish **a dedicated high speed, low-latency connection from your on-premise to AWS**.  
+
+Example of a partnered data center in Toronto:
+- Allied Data Centers 
+
+You would use th **AWS Direct Connect** service to order and establish a connection. 
+
+
+
+## AWS Local Zones
+
+**Local Zones** are data centers located very close to a densely populated area to provide single-digit millisecond low latency performance (e.g. 7ms) for that area.  
+
+To use a Local Zone, you need to opt in, probably open a support ticket to get access to it.
+
+- **LA, California** was the first Local Zone to be deployed
+  + It is a logical extension of the US-West Region
+  + The Identifier looks like the following: `us-west-2-lax-1a`
+- Only specific AWS Services have been made available
+  + EC2 Instance Types (T3, C5, R5, R5d, I3en, G4)
+  + EBS (io1 and gp2)
+  + Amazon FSx
+  + Application Load Balancer
+  + Amazon VPC
+
+The purpose of Local Zone is the support highly-demanding applications sensitive to latencies:
+- Media & Entertainment
+- Electronic Design Automation
+- Ad-Tech
+- Machine Learning 
+
+
+
+## Wavelength Zones 
+
+AWS Wavelength Zones allows for **edge-computing on 5G Networks**. Applicatinos will have **ultra-low latency** being as close as possible to the users. 
+
+AWS has partnered with various Telecom companies to utilize their 5G Networks. For example:
+- verizon
+- KDDI
+- vodafone
+- SK telecom
+
+The idea here is that you create a Subnet tied to a Wavelength Zone and then you can launch VMs to the edge of the targeted 5G Networks.
+
+Example:
+
+Say you have the network, and you're using AWS to deploy an Ec2 instance and then when users connect to those radio towers, they're going to be routed to nearby hardware that is running those VMs, the advantage here is that it's super super low latency.
+
+![wavelength zones example](/ccp-module/assets/radio.jpg "wavelength zones example")

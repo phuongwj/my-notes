@@ -1,6 +1,4 @@
-# day-1 / Cloud Concepts
-
-## Table of Contents
+# Cloud Concepts
 
 - [What is Cloud Computing?](#what-is-cloud-computing)
   + [Metaphor before diving into On-Premise and Cloud Providers](#metaphor-before-diving-into-on-premise-and-cloud-providers)
