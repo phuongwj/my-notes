@@ -63,7 +63,7 @@ The idea is we're not done with the evolution of computing power, things are goi
 
 - Elastic Compute Cloud EC2.
 - AWS Inferentiare (Inf1).
-- AWS Brakcet (for this one, you can actually use Quantum Computing as a service).
+- AWS Bracket (for this one, you can actually use Quantum Computing as a service).
 
 
 
@@ -99,7 +99,7 @@ The benefits of the cloud is a summary of reasons why an organization would cons
 
 1. Trade capital expense for variable expense.
 
-    You can **Pay-On-Demand** meaning there is no upfront-cost and you pay for only what you consume or pay by the hour, minutes or seconds. *Instead of paying for upfront costs of data centerse and servers*.
+    You can **Pay-On-Demand** meaning there is no upfront-cost and you pay for only what you consume or pay by the hour, minutes or seconds. *Instead of paying for upfront costs of data centers and servers*.
 
 2. Benefit from massive economies of scale.
 
