@@ -9,13 +9,13 @@ When we're talking about **Innovation Waves**, we're talking about **Kondratiev 
 
 The phenomenon is closely connected with Technology life cycles. 
 
-![Kondratiev waves](/ccp-module/assets/wave.png "Kondratiev waves")
+![Kondratiev waves](/aws-certified-cloud-practitioner/assets/wave.png "Kondratiev waves")
 
 Each wave irreversibly changes the society on a global scale. The idea here being said is that the latest wave is **Cloud Technology**, or other things like ML/AI but maybe they're all part of the same waves or separate waves, but general they're broken up based on the **PRDE**
 
 This is a common pattern of a wave change of **supply** and **demand**:
 
-![Wave pattern](/ccp-module/assets/wave-pattern.jpg "Common pattern of a wave")
+![Wave pattern](/aws-certified-cloud-practitioner/assets/wave-pattern.jpg "Common pattern of a wave")
 
 So if we're seeing this, we know that we are in a wave and where we are in a wave.
 
@@ -171,7 +171,7 @@ https://aws.amazon.com/about-aws/global-infrastructure/
 
 Regions are **geographically distinct locations** consisting of one or more Availability Zones. 
 
-![AWS Regions](/ccp-module/assets/regions.jpg "AWS Regions")
+![AWS Regions](/aws-certified-cloud-practitioner/assets/regions.jpg "AWS Regions")
 
 Every region is **physically isolated** from and independent of every other region in terms of **location, power, water supply**. 
 
@@ -205,7 +205,7 @@ Example:
 
 This will determine where an AWS Services will be launched and what will be seen within an AWS Service's console.
 
-![AWS Regional Services](/ccp-module/assets/regional-services.jpg "AWS Regional Services")
+![AWS Regional Services](/aws-certified-cloud-practitioner/assets/regional-services.jpg "AWS Regional Services")
 
 You generally don't explicitly set the Region for a service at the time of creation.
 
@@ -222,7 +222,7 @@ Example:
 
 What this means is that if you search up CloudFront, and go into the CloudFront console, it will just say "Global", and you can't switch out of that.
 
-![Example of an AWS Global Services](/ccp-module/assets/cf-global.jpg "Example of an AWS Global Services")
+![Example of an AWS Global Services](/aws-certified-cloud-practitioner/assets/cf-global.jpg "Example of an AWS Global Services")
 
 For these global services at the time of creation:
 
@@ -256,7 +256,7 @@ A lot of services don't even require you to choose a subnet because they're full
 
 Example of an architectural diagram, representing two AZs, the Subnets associated with those AZs, and EC2 instances (Virtual Machines) launched in those subnetes.
 
-![Example of an Architectural Diagram mentioned above](/ccp-module/assets/azs-with-subnets.jpg "Example of an Architectural Diagram mentioned above")
+![Example of an Architectural Diagram mentioned above](/aws-certified-cloud-practitioner/assets/azs-with-subnets.jpg "Example of an Architectural Diagram mentioned above")
 
 ### Summary Table for clearer view:
 
@@ -270,25 +270,25 @@ Example of an architectural diagram, representing two AZs, the Subnets associate
 
 - Say we have a AWS Region and in this particular one, we have Canada (Central), which is Montreal => `ca-central-1`.
 
-![Visualization Representation part1](/ccp-module/assets/repre-1.jpg "Visualization Representation part1")
+![Visualization Representation part1](/aws-certified-cloud-practitioner/assets/repre-1.jpg "Visualization Representation part1")
 
 - The idea here is that the region has multiple AZs, they are `ca-central-1a`, `ca-central-1b`, `ca-central-1d`.
 
-![Visualization Representation part2](/ccp-module/assets/repre-2.jpg "Visualization Representation part2")
+![Visualization Representation part2](/aws-certified-cloud-practitioner/assets/repre-2.jpg "Visualization Representation part2")
 
 - Within our AZs, they are made up of **one or more** data centers, not a single data centers, but a collection of buildings. 
 
-![Visualization Representation part3](/ccp-module/assets/repre-3.jpg "Visualization Representation part3")
+![Visualization Representation part3](/aws-certified-cloud-practitioner/assets/repre-3.jpg "Visualization Representation part3")
 
 - All AZs in an AWS Region are interconnected with high-bandwidth, low-latency networking, over fully redundant, dedicated metro fiber providing high-throughput, low-latency networking between (basically means very fast connection in between).
 
-![Visualization Representation part4](/ccp-module/assets/repre-4.jpg "Visualization Representation part4")
+![Visualization Representation part4](/aws-certified-cloud-practitioner/assets/repre-4.jpg "Visualization Representation part4")
 
 - All traffic between AZs is encrypted. 
 
 - AZs are within 100km (60 miles) of each other.
 
-![Visualization Representation part5](/ccp-module/assets/repre-5.jpg "Visualization Representation part5")
+![Visualization Representation part5](/aws-certified-cloud-practitioner/assets/repre-5.jpg "Visualization Representation part5")
 
 
 
@@ -319,7 +319,7 @@ The scope of a fault domain could be:
 - the entire data center builing
 It's up to the Cloud Service Provider (CSPs) to define the boundaries of a domain. AWS abstracts it all away so you don't have to think about it. But just to compare it against Azure, you actually define your fault domain. You might say that "make sure this workload is never running on the same VM on the same rack for these things", and you might like that level of control.
 
-![Fault Level & Fault Domain Example](/ccp-module/assets/fault-ex.jpg "Fault Level & Fault Domain Example")
+![Fault Level & Fault Domain Example](/aws-certified-cloud-practitioner/assets/fault-ex.jpg "Fault Level & Fault Domain Example")
 
 Data centers can also have fault domains within them. Maybe that have one particular room and that room is secure, so like if there's fire in that room, it's not going to affect the other rooms. 
 

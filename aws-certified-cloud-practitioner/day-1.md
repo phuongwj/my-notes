@@ -49,6 +49,8 @@
   + [Hybrid](#hybrid)
   + [On-Premise](#on-premise-1)
 
+
+
 ## What is Cloud Computing?
 
 Cloud is a network of remote servers around the world that store data, run applications, and power services, so you don't have to. Think of it as renting a storage unit, except it's online, more flexible, and can do a lot more than just store things. 
