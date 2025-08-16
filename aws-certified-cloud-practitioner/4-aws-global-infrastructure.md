@@ -1,5 +1,56 @@
 # AWS Global Infrastructure
 
+- [AWS Global Infrastructure Overview](#aws-global-infrastructure-overview)
+  + [What is the AWS Global Infrastructure?](#what-is-the-aws-global-infrastructure)
+
+- [AWS Global Infrastructure Follow Along](#aws-global-infrastructure-follow-along)
+
+- [Regions](#regions)
+
+- [Regions vs Global Services](#regions-vs-global-services)
+  + [Regional Services](#regional-services)
+  + [Global Services](#global-services)
+
+- [Availability Zones (AZs)](#availability-zones-azs)
+  + [Summary Table for clearer view](#summary-table-for-clearer-view)
+  + [Visualization Representation](#visualization-representation)
+
+- [Selecting Regions and AZs Follow Along](#selecting-regions-and-azs-follow-along)
+
+- [Fault Tolerance](#fault-tolerance)
+  + [What is a fault domain?](#what-is-a-fault-domain)
+  + [What is a fault level?](#what-is-a-fault-level)
+  + [Failure Zone](#failure-zone)
+  + [Multi-AZ for High Availability](#multi-az-for-high-availability)
+
+- [AWS Global Network](#aws-global-network)
+  + [Edge Locations](#edge-locations)
+    + [On ramps](#on-ramps)
+    + [Off ramp](#off-ramps)
+    + [VPC Endpoints](#vpc-endpoints)
+
+- [Points of Presence (PoP)](#points-of-presence-pop)
+  + [Points of Presence (PoP)](#points-of-presence-pop-1)
+  + [AWS Point of Presence](#aws-point-of-presence)
+  + [PoP resources are](#pop-resources-are)
+    + [Edge Locations](#edge-locations)
+    + [Regional Edge Locations](#regional-edge-locations)
+
+- [Tier 1](#tier-1)
+
+- [AWS Service using PoPs](#aws-services-using-pops)
+  + [Amazon Cloudfront](#amazon-cloudfront)
+  + [Amazon S3 Transfer Acceleration](#amazon-s3-transfer-acceleration)
+  + [AWS Global Accelerator](#aws-global-accelerator)
+
+- [AWS Direct Connect](#aws-direct-connect)
+
+- [Direct Connect Locations](#direct-connect-locations)
+
+- [AWS Local Zones](#aws-local-zones)
+
+- [Wavelength Zones](#wavelength-zones)
+
 
 
 ## AWS Global Infrastructure Overview
@@ -16,14 +67,16 @@ The AWS Global Infrastructure is made up of the following resources:
 - **35** Local Zone
 - **29** Wavelength Zones
 
-AWS has **millions** of active customers and **ten of thousansd** of partners globally.
+AWS has **millions** of active customers and **ten of thousands** of partners globally.
 
 
 
 ## AWS Global Infrastructure Follow Along 
 
-You can check the link below that shows the global infrastructure.
+You can check the link below that shows the global infrastructure and anything related to it.
 https://aws.amazon.com/about-aws/global-infrastructure/
+
+Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **2:07:50 to 2:10:35**.
 
 
 
@@ -106,7 +159,7 @@ Data centers within a region will be isolate from each other (different building
 
 It's common practice to run workloads in at least 3 AZs to ensure services remain available in case one or two data centers fail. (High availability).
 
-AZs are represented by a Region Code, followed by a letter identifer e.g. **us-east-1a**.
+AZs are represented by a Region Code, followed by a letter identifier e.g. **us-east-1a**.
 
 A Subnet is associated with an Availability Zone.
 
@@ -114,7 +167,7 @@ You never choose the AZ when launching resources. You choose the Subnet which is
 
 A lot of services don't even require you to choose a subnet because they're fully managed by AWS. However, in cases like virtual machines, you're always choosing a subnet.
 
-Example of an architectural diagram, representing two AZs, the Subnets associated with those AZs, and EC2 instances (Virtual Machines) launched in those subnetes.
+Example of an architectural diagram, representing two AZs, the Subnets associated with those AZs, and EC2 instances (Virtual Machines) launched in those subnets.
 
 ![Example of an Architectural Diagram mentioned above](/aws-certified-cloud-practitioner/assets/azs-with-subnets.jpg "Example of an Architectural Diagram mentioned above")
 
@@ -175,8 +228,8 @@ A fault level is a collection of fault domains.
 The scope of a fault domain could be:
 - specific servers in a rack
 - an entire rack in a data center
-- an entire room in a daat center
-- the entire data center builing
+- an entire room in a data center
+- the entire data center building
 It's up to the Cloud Service Provider (CSPs) to define the boundaries of a domain. AWS abstracts it all away so you don't have to think about it. But just to compare it against Azure, you actually define your fault domain. You might say that "make sure this workload is never running on the same VM on the same rack for these things", and you might like that level of control.
 
 ![Fault Level & Fault Domain Example](/aws-certified-cloud-practitioner/assets/fault-ex.jpg "Fault Level & Fault Domain Example")
@@ -194,7 +247,7 @@ Each AZ is designed as an **independent failure zone**.
 ### Failure Zone
 - AZs are physically separated within a typical metropolitan region and are located in lower risk flood plains.
 - Discrete uninterruptible power supply (UPS) and onsite backup generation facilities.
-- Data centers located in different AZs are designd to be supplied by independent substations to reduce the risk of an event on the power grid impacting more than one AZ. 
+- Data centers located in different AZs are designed to be supplied by independent substations to reduce the risk of an event on the power grid impacting more than one AZ. 
 - AZs are all redundantly connected to multiple tier-1 transit providers. 
 
 ### Multi-AZ for High Availability
@@ -228,7 +281,7 @@ Examples:
 
 #### Off ramps 
 
-Uuses Edge Locations as an **off-ramp** to provide at the Edge storage and compute near the end user.
+Uses Edge Locations as an **off-ramp** to provide at the Edge storage and compute near the end user.
 
 Examples:
 - Amazon CloudFront (CDN) (for context, it's a content distribution network)
@@ -248,31 +301,27 @@ An intermediate location between an AWS Region and the end user, and this locati
 
 ### AWS Point of Presence
 
-For **AWS**, a Point of Presence is a data center **owned by AWS or a trusted partner** that is utilized by AWS Services related **for content delivery or expediated upload**.
+For **AWS**, a Point of Presence is a data center **owned by AWS or a trusted partner** that is utilized by AWS Services related **for content delivery or expedited upload**.
 
-**PoP resources are:**
-- Edge Locations
-- Regional Edge Caches
+### PoP resources are:
 
-Example: 
+- #### Edge Locations
+  + Data centers that hold cached (copy) on the most popular files (e.g. web pages, images, and videos) so that the delivery of distance to the end users are reduced.
 
-![Example of an AWS PoP](/ccp-module/assets/pop.jpg "Example of an AWS PoP")
+- #### Regional Edge Caches
+  + Data centers that hold much larger caches of less-popular files to reduce a full round-trip and also to reduce the cost of transfer fees.
 
-We're seeing an *"S3 Bucket"*, and it has to go through a *"Regional Edge Cache"*, then get to an *"Edge Location"*. 
+- #### Example: 
 
-### Edge Locations
+  ![Example of an AWS PoP](/aws-certified-cloud-practitioner/assets/pop.jpg "Example of an AWS PoP")
 
-**Edge Locations** are data centers that hold cached (copy) on he most popylar files (e.g. web pages, images and videos) so that the delivery of distance to the end users are reduced.
-
-### Regional Edge Locations
-
-**Regional Edge Locations** are data enters that hold much larger caches of less-popular files to reduce a full roundtrip and also to reduce the cost of transfer fees.
+  We're seeing an *"S3 Bucket"*, and it has to go through a *"Regional Edge Cache"*, then get to an *"Edge Location"*. 
 
 
 
 ## Tier 1
 
-![tier diagram](/ccp-module/assets/tier-dia.jpg "tier diagram")
+![tier diagram](/aws-certified-cloud-practitioner/assets/tier-dia.jpg "tier diagram")
 
 As you can see, PoPs live at the edge/**intersection** of two networks.
 
@@ -286,24 +335,24 @@ AWS AZs are all redundantly connected to multiple **tier-1 transit providers**.
 
 ## AWS Services using PoPs
 
-The following AWS Services use PoPs **for content delivery or expediated upload**.
+The following AWS Services use PoPs **for content delivery or expedited upload**.
 
 ### Amazon Cloudfront 
 
-A **Content Delivery Network (CDN) service** that:
-- You point your website to CloudFront so that it will route requests to nearest Edge Location cache. 
-- Allows you to choose an **origin** (such as a web-server or storage) that will be source of cached.
-- Caches the contents of what origin would returned to various Edge Locations around the world.
+- A **Content Delivery Network (CDN) service** that:
+  - You point your website to CloudFront so that it will route requests to nearest Edge Location cache. 
+  - Allows you to choose an **origin** (such as a web-server or storage) that will be source of cached.
+  - Caches the contents of what origin would returned to various Edge Locations around the world.
 
-## Amazon S3 Transfer Acceleration 
+### Amazon S3 Transfer Acceleration 
 
-Allows you to generate a special URL that can be used by end users to upload files to a nearby Edge Location. Once a file is uploaded to an Edge Location, it can move much faster within the AWS Network to reach S3. 
+- Allows you to generate a special URL that can be used by end users to upload files to a nearby Edge Location. Once a file is uploaded to an Edge Location, it can move much faster within the AWS Network to reach S3. 
 
-## AWS Global Accelerator
+### AWS Global Accelerator
 
-Can find the optimal path from the end user to your web-servers. Global Accelerator are deployed within Edge Locations so you send user traffic to an Edge Location instead of directly to your web application.
+- Can find the optimal path from the end user to your web-servers. Global Accelerator are deployed within Edge Locations so you send user traffic to an Edge Location instead of directly to your web application.
 
-> Let's say you're running a web server in `us-east-1`, and you just don't have the time to set up infrastructure in other regions. You can turn this on and you'll basically get a boost. 
+  > Let's say you're running a web server in `us-east-1`, and you just don't have the time to set up infrastructure in other regions. You can turn this on and you'll basically get a boost. 
 
 
 
@@ -313,7 +362,7 @@ A **private/dedicated connection between your data center, office, co-location a
 > AWS mention that the connection is private, but that doesn't mean that it's secure. We'll talk about this once we've reached VPN, to make sure our connections are secure.
 > A co-location (aka carrier-hotel) is a data center where equipment, space, and bandwidth are available for rental to retail customers.
 
-![direct connect example diagram](/ccp-module/assets/direct-con.jpg "direct connect example diagram")
+![direct connect example diagram](/aws-certified-cloud-practitioner/assets/direct-con.jpg "direct connect example diagram")
 
 Imagine you have a direct fiber cable that connects your data center to AWS. It’s like using your local servers - everything feels fast and smooth, with almost no delay.
 
@@ -364,7 +413,7 @@ The purpose of Local Zone is the support highly-demanding applications sensitive
 
 ## Wavelength Zones 
 
-AWS Wavelength Zones allows for **edge-computing on 5G Networks**. Applicatinos will have **ultra-low latency** being as close as possible to the users. 
+AWS Wavelength Zones allows for **edge-computing on 5G Networks**. Applications will have **ultra-low latency** being as close as possible to the users. 
 
 AWS has partnered with various Telecom companies to utilize their 5G Networks. For example:
 - verizon
@@ -378,4 +427,4 @@ Example:
 
 Say you have the network, and you're using AWS to deploy an Ec2 instance and then when users connect to those radio towers, they're going to be routed to nearby hardware that is running those VMs, the advantage here is that it's super super low latency.
 
-![wavelength zones example](/ccp-module/assets/radio.jpg "wavelength zones example")
+![wavelength zones example](/aws-certified-cloud-practitioner/assets/radio.jpg "wavelength zones example")
