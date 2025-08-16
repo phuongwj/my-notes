@@ -57,7 +57,7 @@ The throughout measured at which a computer can complete a computational task. A
 - GPU Computing 
 - Quantum Computing 
 
-The idea is we're not done with the evolution of computing power, things are going to geta lot faster once we solve things. 
+The idea is we're not done with the evolution of computing power, things are going to get a lot faster once we solve things. 
 
 ### AWS Service Offering
 
