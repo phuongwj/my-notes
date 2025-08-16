@@ -11,7 +11,6 @@
 
 - [The Benefits of Cloud](#the-benefits-of-cloud)
   + [The Six Advantages of Cloud](#the-six-advantages-of-cloud)
-  + [The Seven Advantages of Cloud](#the-seven-advantages-of-cloud)
 
 
 
@@ -95,59 +94,39 @@ The benefits of the cloud is a summary of reasons why an organization would cons
 
 
 
-## The Six Advantages of Cloud 
+## The Six Advantages of Cloud
 
-1. Trade capital expense for variable expense.
+> Andrew Brown did mention that based on this Cloud Doc Reference (https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html), there's only **Six Advantages of Cloud**, but he himself added one extra advantage to better map the new benefits of the Cloud.
 
-    You can **Pay-On-Demand** meaning there is no upfront-cost and you pay for only what you consume or pay by the hour, minutes or seconds. *Instead of paying for upfront costs of data centers and servers*.
+1. Cost-effective: 
 
-2. Benefit from massive economies of scale.
+    - **On-demand pricing** or **Pay-as-you-go (PAYG)**.
+    - You **pay for what you consume**, **no up-front cost**.
 
-    You are **sharing the cost with other customers** to get unbeatable savings. *Hundreds of thousands of customers utilizing a fraction of a server*.
+2. Global:
 
-3. Stop guessing capacity.
+    - Launch workloads **anywhere in the world**. Just choose a region.
 
-    **Scale up or down** to meet the current need. Launch and destroy services whenever. *Instead of paying for idle or underutilized servers*.
+3. Secure:
 
-4. Increase speed and agility.
+    - Cloud provider takes care of physical security.
+    - **Cloud services can be secure by default** or you have the ability to configure access down to a granular level.
 
-    **Launch resources within a few clicks in minutes** *instead of waiting days or weeks of your IT to implement the solution on-premise.
+4. Reliable:
 
-5. Stop spending money on running and maintaining data centers.
+    - Data backup, disaster recovery, data replication, and fault tolerance.
 
-    **Focus on your own customers**, developing and configuring your applications. *Instead of operations such as of racking, stacking, and powering servers*.
+5. Scalable:
 
-6. Go global in minutes.
+    - Increase or decrease resources and services based on demand.
+    - (*Can grow or shrink when needed, manual or pre-planned*).
 
-    **Deploy your app in multiple regions around the world with a few clicks*.
-    Provide lower latency and a better experience for your customers at minimal cost.
+6. Elastic:
 
-References: https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html
+    - **Automate** scaling during spikes and drop in demand.
+    - (*Automatically grows or shrinks in response to current demand*).
 
+7. Current (The extra advantage):
 
-
-## The Seven Advantages of Cloud
-
-- Cost-effective: 
-
-    You **pay for what you consume**, **no up-front cost**. On-demand pricing or Pay-as-you-go (PAYG) with thousands of customers sharing the cost of the resources.
-
-- Global:
-
-    Launch workloads **anywhere in the world**. Just choose a region.
-
-- Secure:
-
-    Cloud provider takes care of physical security. **Cloud services can be secure by default** or you have the ability to configure access down to a granular level.
-
-- Reliable:
-
-    Data backup, disaster recovery, data replication, and fault tolerance.
-
-- Scalable:
-
-    Increase or decrease resources and services based on demand.
-
-- Elastic:
-
-    **Automate** scaling during spikes and drop in demand.
+    - The underlying hardware and managed software is patched, upgraded and replaced by the cloud provider without interruption to you.
+    > Note: This is not on the list but it's a good one to still be mentioned.
