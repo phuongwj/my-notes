@@ -52,7 +52,29 @@
 
 - [Wavelength Zones](#wavelength-zones)
 
+- [Data Residency](#data-residency)
+  - [What is Data Residency?](#what-is-data-residency)
+  - [What is Compliance Boundaries?](#what-is-compliance-boundaries)
+  - [What is Data Sovereignty?](#what-is-data-sovereignty)
+  - [How AWS Helps Keep Your Data in the Right Place](#how-aws-helps-keep-your-data-in-the-right-place)
+    - [AWS Outposts](#aws-outposts)
+    - [AWS Config](#aws-config)
+    - [IAM Policies/Service Control Policies (SCPs)](#iam-policiesservice-control-policies-scps)
+    - [Summary Table](#summary-table-2)
 
+- [AWS for Government](#aws-for-government)
+  - [What is Public Sector?](#what-is-public-sector)
+
+- [GovCloud](#govcloud)
+  - [Federal Risk and Authorization Management Program (FedRAMP)](#federal-risk-and-authorization-management-program-fedramp)
+  - [What is GovCloud?](#what-is-govcloud)
+  - [AWS GovCloud Regions](#aws-govcloud-regions)
+
+- [AWS in China](#aws-in-china)
+
+- [AWS in China Follow Along](#aws-in-china-follow-along)
+
+- [Sustainability](#sustainability)
 
 ## AWS Global Infrastructure Overview
 
@@ -523,7 +545,7 @@ Say you have the network, and you're using AWS to deploy an EC2 instance and the
 
 
 
-## Gov Cloud
+## GovCloud
 
 ### Federal Risk and Authorization Management Program (FedRAMP)
 
