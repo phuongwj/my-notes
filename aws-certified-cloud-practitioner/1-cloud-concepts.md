@@ -264,7 +264,7 @@ It packages your code, runtime, libraries, and dependencies together - so it run
 => VMs give you a full (virtual) computer
 => Containers give you tiny, efficient app environments inside that computer
 
-- Virtual Machine running multiple containers
+- **Virtual Machine running multiple containers**
 - **Docker Daemon** is the name of the software layer that lets you run multiple containers
 - You can maximize the utilize of the available capacity which is more cost-effective
 - Your containers share the same underlying OS so containers are more efficient than multiple VMs
@@ -278,6 +278,14 @@ It packages your code, runtime, libraries, and dependencies together - so it run
 - You're only responsible for code and data, nothing else
 - Very cost-effective, only pay for the time code is running, VMs only run when there is code to be executed
 - Cold Starts is a side-effect of this setup
+
+
+| Type        | What It Is                  | Isolation / Security           | Scaling                  | Cost                 | Analogy                               |
+|------------|-----------------------------|-------------------------------|--------------------------|--------------------|---------------------------------------|
+| Dedicated  | Physical server              | Full isolation, high security  | Manual, difficult        | Often overpay       | Owning a whole house                  |
+| VM         | Virtual computer             | Moderate isolation             | Easy vertical/horizontal | Pay for fraction     | Hotel rooms in a building            |
+| Container  | Lightweight app environment  | Moderate isolation, shares OS  | Easy, portable           | Cost-effective       | Toolboxes inside an apartment (VM)   |
+| Function   | Serverless code execution    | High isolation per execution   | Auto-scaled              | Pay per runtime      | Upload code, platform handles rest   |
 
 
 

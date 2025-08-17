@@ -221,35 +221,35 @@ You can check out the portion 2:18:32 til 2:22:04 in the video to see how Andrew
 
 ### What is a fault domain?
 
-A fault domain is a section of a network that is vulnerable to damage if a critical device or system fails. The purpose of a fault domain is that if a failure occurs **it will not cascade outside that domain**, limiting the damage possible. 
+- A fault domain is a section of a network that is vulnerable to damage if a critical device or system fails. The purpose of a fault domain is that if a failure occurs **it will not cascade outside that domain**, limiting the damage possible. 
 
-> So this is generally fine, because they know that this is a **fault domain** and nothing outside of this room is going to be affected.
+  > So this is generally fine, because they know that this is a **fault domain** and nothing outside of this room is going to be affected.
 
-You can have fault domains nested inside fault domains.
+- You can have fault domains nested inside fault domains.
 
 ### What is a fault level?
 
-A fault level is a collection of fault domains.
+- A fault level is a collection of fault domains.
 
-The scope of a fault domain could be:
-- Specific servers in a rack
-- An entire rack in a data center
-- An entire room in a data center
-- The entire data center building
+- The scope of a fault domain could be:
+  - Specific servers in a rack
+  - An entire rack in a data center
+  - An entire room in a data center
+  - The entire data center building
 
-It's up to the Cloud Service Provider (CSPs) to define the boundaries of a domain. AWS abstracts it all away so you don't have to think about it. But just to compare it against Azure, you actually define your fault domain. You might say that "make sure this workload is never running on the same VM on the same rack for these things", and you might like that level of control.
+- It's up to the Cloud Service Provider (CSPs) to define the boundaries of a domain. AWS abstracts it all away so you don't have to think about it. But just to compare it against Azure, you actually define your fault domain. You might say that "make sure this workload is never running on the same VM on the same rack for these things", and you might like that level of control.
 
-![Fault Level & Fault Domain Example](/aws-certified-cloud-practitioner/assets/fault-ex.jpg "Fault Level & Fault Domain Example")
+  ![Fault Level & Fault Domain Example](/aws-certified-cloud-practitioner/assets/fault-ex.jpg "Fault Level & Fault Domain Example")
 
-Data centers can also have fault domains within them. Maybe that have one particular room and that room is secure, so like if there's fire in that room, it's not going to affect the other rooms (Although realistically, if there’s a fire in one room, the whole data center would probably catch on fire 😂).
+- Data centers can also have fault domains within them. Maybe that have one particular room and that room is secure, so like if there's fire in that room, it's not going to affect the other rooms (Although realistically, if there’s a fire in one room, the whole data center would probably catch on fire 😂).
 
-Each Amazon Region is designed to be completely **isolated** from the other Amazon Regions.
-- This achieves the greatest possible fault tolerance and stability.
+- Each Amazon Region is designed to be completely **isolated** from the other Amazon Regions.
+  - This achieves the greatest possible fault tolerance and stability.
 
-Each AZ is **isolated**, but the AZs in a Region are connected through low-latency links.
+- Each AZ is **isolated**, but the AZs in a Region are connected through low-latency links.
 
-Each AZ is designed as an **independent failure zone**.
-> A *"Failure Zone"* is AWS describing a *Fault Domain*.
+- Each AZ is designed as an **independent failure zone**.
+  > A *"Failure Zone"* is AWS describing a *Fault Domain*.
 
 ### Failure Zone
 - AZs are physically separated within a typical metropolitan region and are located in lower risk flood plains.
@@ -259,46 +259,55 @@ Each AZ is designed as an **independent failure zone**.
 
 ### Multi-AZ for High Availability
 
-If an application is partitioned across AZs, companies are better isolated and protected from issues such as **power outages, lightning strikes, tornadoes, earthquakes**, and more.
-> This is the reason why we want to run in multiple AZs, it is simply because of **fault domain**.
+- If an application is partitioned across AZs, companies are better isolated and protected from issues such as **power outages, lightning strikes, tornadoes, earthquakes**, and more.
+  > This is the reason why we want to run in multiple AZs, it is simply because of **fault domain**.
 
 
 
 ## AWS Global Network
 
-The AWS Global Network represent the **interconnections between AWS Global Infrastructure**. Commonly referred to as *"The Backbone of AWS"*.
+The AWS Global Network, commonly referred to as *"The Backbone of AWS"*, that connects all the **AWS infrastructure** worldwide - Regions, AZs, and Edge Locations. 
 
-Think of it as private express way, where things can move very fast between data centers. 
+Think of it as **private express way**, where data can move **very fast and securely** between AWS data centers, without relying on the slower public internet.
 
-One thing that's utilized a lot to get data in and out of AWS very quickly is **Edge Locations**.
+One key piece of this network is **Edge Locations**, which act like **on-ramps and off-ramps** for traffic entering or leaving AWS.
 
 ### Edge Locations
 
-Can act as **on and off ramps** to the AWS Global Network. 
+- Can act as **on and off ramps** for traffic entering or leaving AWS.
 
-#### On ramps
+  #### On ramp
 
-Uses Edge Locations as an **on-ramp** to quickly reach AWS resources in other regions by traversing the fast AWS Global Network.
+  - Let customer traffic enter AWS quickly through the nearest Edge Location. Once on AWS's private network, traffic moves faster and more reliably across Regions.
 
-Examples:
-- AWS Global Accelerator
-- AWS S3 Transfer Acceleration 
+  - Examples:
+    - AWS Global Accelerator: routes user traffic to the closest AWS Region effectively.
+    - AWS S3 Transfer Acceleration: speeds up file uploads/downloads to S3 by using nearby Edge Locations.
 
-> Notice the names, they're like *"Accelerator"*, *"Accelerations"*, the idea here is that they are moving very fast.
+    > Notice the names, they're like *"Accelerator"*, *"Accelerations"*, the idea here is that they are moving very fast.
 
-#### Off ramps 
+  #### Off ramps 
 
-Uses Edge Locations as an **off-ramp** to provide at the Edge storage and compute near the end user.
+  - Bring AWS services and content closer to end-users by delivering it from Edge Locations. Reduces latency because users don't have to reach all the way into a distant Region.
 
-Examples:
-- Amazon CloudFront (CDN) (for context, it's a content distribution network)
+  - Examples:
+    - Amazon CloudFront (CDN) (for context, it's a content distribution network)
 
-#### VPC Endpoints
+  #### VPC Endpoints
 
-> Another thing that is kind of always utilized in the Global Network
-> Doesn't use Edge Locations
+  > Don't use Edge Locations, but are always utilized in the Global Network to avoid leaving the AWS Network.
 
-Ensuring your resources stay within the AWS Network and do no traverse over the Public Internet (i.e. if you have a resource running in `us-east-1` and 1 in `eu` and they never have to go to the Internet, it would make sense to always enforce it to stay within the AWS Network because it's going to be a lot faster).
+  - Ensuring your resources stay within the AWS Network and do no traverse over the public Internet.
+  - Keeps traffic private, secure, and faster by staying entirely inside the AWS backbone.
+  - Ensuring your resources stay within the AWS Network and do no traverse over the Public Internet (i.e. VPC Endpoints make sure your resources talk to AWS services without ever going out to the public internet - the traffic stays entirely inside AWS's private network, making it faster and more secure).
+    > **Example:** If you have resources in `us-east-1` that need to access S3 or DynamoDB, you can use a VPC Endpoint so that the traffic never leaves AWS's private network.
+
+  | Concept       | Direction  | Purpose 
+  | --------------| -----------| -------------------------------------------------------------------------
+  | On-Ramps      | Into AWS   | Bring user traffic onto AWS's private backbone for speed & reliability
+  | Off-Ramps     | Out of AWS | Deliver AWS services/content closer to end-users for lower latency
+  | VPC Endpoints | Internal   | Keep communication between AWS resources and services private inside AWS
+
 
 ## Points of Presence (PoP)
 
@@ -385,12 +394,12 @@ Therefore, **Direct Connect**:
 
 ## Direct Connect Locations
 
-**Direct Connect Locations** are **trusted partnered data centers** that you can establish **a dedicated high speed, low-latency connection from your on-premise to AWS**.  
+- **Direct Connect Locations** are **trusted partnered data centers** that you can establish **a dedicated high speed, low-latency connection from your on-premise to AWS**.  
 
-Example of a partnered data center in Toronto:
-- Allied Data Centers 
+- Example of a partnered data center in Toronto:
+  - Allied Data Centers 
 
-You would use th **AWS Direct Connect** service to order and establish a connection. 
+- You would use the **AWS Direct Connect** service to order and establish a connection. 
 
 
 
@@ -432,6 +441,6 @@ The idea here is that you create a Subnet tied to a Wavelength Zone and then you
 
 Example:
 
-Say you have the network, and you're using AWS to deploy an Ec2 instance and then when users connect to those radio towers, they're going to be routed to nearby hardware that is running those VMs, the advantage here is that it's super super low latency.
+Say you have the network, and you're using AWS to deploy an EC2 instance and then when users connect to those radio towers, they're going to be routed to nearby hardware that is running those VMs, the advantage here is that it's super super low latency.
 
 ![wavelength zones example](/aws-certified-cloud-practitioner/assets/radio.jpg "wavelength zones example")
