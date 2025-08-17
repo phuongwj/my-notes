@@ -29,6 +29,7 @@
   + [Virtual Machines](#virtual-machines)
   + [Containers](#containers)
   + [Functions](#functions)
+  + [Summary Table](#summary-table)
 
 - [Types of Cloud Computing](#types-of-cloud-computing)
   + [Software as a Service (SaaS)](#software-as-a-service-saas)
@@ -279,6 +280,7 @@ It packages your code, runtime, libraries, and dependencies together - so it run
 - Very cost-effective, only pay for the time code is running, VMs only run when there is code to be executed
 - Cold Starts is a side-effect of this setup
 
+### Summary Table:
 
 | Type        | What It Is                  | Isolation / Security           | Scaling                  | Cost                 | Analogy                               |
 |------------|-----------------------------|-------------------------------|--------------------------|--------------------|---------------------------------------|

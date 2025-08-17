@@ -12,7 +12,7 @@
   + [Global Services](#global-services)
 
 - [Availability Zones (AZs)](#availability-zones-azs)
-  + [Summary Table for clearer view](#summary-table-for-clearer-view)
+  + [Summary Table](#summary-table)
   + [Visualization Representation](#visualization-representation)
 
 - [Selecting Regions and AZs Follow Along](#selecting-regions-and-azs-follow-along)
@@ -28,6 +28,7 @@
     + [On ramps](#on-ramps)
     + [Off ramp](#off-ramps)
     + [VPC Endpoints](#vpc-endpoints)
+    + [Summary Table](#summary-table-1)
 
 - [Points of Presence (PoP)](#points-of-presence-pop)
   + [Points of Presence (PoP)](#points-of-presence-pop-1)
@@ -177,7 +178,7 @@ Example of an architectural diagram, representing two AZs, the Subnets associate
 - `us-east-1` and `us-east-2` are regions
 - our 2 AZs `1a`, and `1b`, and they're also subnets
 
-### Summary Table for clearer view:
+### Summary Table:
 
 | Concept      | Description                                               | Example
 | ------------ | --------------------------------------------------------- | -------------------------------------------
@@ -301,6 +302,8 @@ One key piece of this network is **Edge Locations**, which act like **on-ramps a
   - Keeps traffic private, secure, and faster by staying entirely inside the AWS backbone.
   - Ensuring your resources stay within the AWS Network and do no traverse over the Public Internet (i.e. VPC Endpoints make sure your resources talk to AWS services without ever going out to the public internet - the traffic stays entirely inside AWS's private network, making it faster and more secure).
     > **Example:** If you have resources in `us-east-1` that need to access S3 or DynamoDB, you can use a VPC Endpoint so that the traffic never leaves AWS's private network.
+
+  ### Summary Table:
 
   | Concept       | Direction  | Purpose 
   | --------------| -----------| -------------------------------------------------------------------------
@@ -444,3 +447,128 @@ Example:
 Say you have the network, and you're using AWS to deploy an EC2 instance and then when users connect to those radio towers, they're going to be routed to nearby hardware that is running those VMs, the advantage here is that it's super super low latency.
 
 ![wavelength zones example](/aws-certified-cloud-practitioner/assets/radio.jpg "wavelength zones example")
+
+
+
+## Data Residency
+
+> When you use the cloud (like AWS), your data isn't just "floating in the air". It **physically resides somewhere** - in a specific data center, city, or country. Some governments and organizations have **rules about where data is allowed to be**, and who has legal authority over it. This is important for **privacy, compliance, and legal reasons**.
+
+### What is Data Residency?
+
+- The physical or geographic location of where an organization or cloud resources reside. 
+- Simply the **physical location** of your data.
+
+### What is Compliance Boundaries?
+
+- A regulatory compliance (legal requirement) by a government or organization that describes where data and cloud resources are allowed to reside.
+- **Rules about where data can legally be stored**.
+
+### What is Data Sovereignty?
+
+- Data Sovereignty is the jurisdictional control or legal authority that can be asserted over data because it's physical location is within jurisdictional boundaries.
+- **The law that applies to your data**, based on where it physically resides.
+
+### How AWS Helps Keep Your Data in the Right Place
+
+  #### AWS Outposts
+
+  - **Definition:** **Physical rack of servers** that you can put in **your own building**.
+  - **Analogy:** Whatever you store or run on Outposts **stays physically in your location**, so you fully control where your data is.
+
+  #### AWS Config
+
+  - **Definition:** 
+    - A service that **monitors your AWS resources** to make sure they follow the rules you set.
+    - Checks if resources (like EC2 or S3) are in the correct region.
+    - Alerts you if something breaks the rules.
+    - Can sometimes automatically fix violations. 
+  - **Analogy:** Think of it as a security guard constantly checking that all your files and servers are in the right rooms. 
+
+  #### IAM Policies/Service Control Policies (SCPs)
+
+  - **Definition:**
+    - **IAM Policies:** Rules that **allow or deny users from doing certain things** in AWS.
+    - **SCPs (Service Control Policies):** Organization-wide rules that apply to all accounts in your AWS organization.
+    - **Use case:** You can **explicitly block access to certain AWS Regions**.
+  - **Analogy:** Like putting a lock on doors - users **cannot enter rooms (regions) that are off-limits**.
+
+
+  #### Summary Table:
+
+  | Tool/Service      | What It Does
+  | ------------------| ------------------------------------------------------------------------------
+  | AWS Outposts      | Physical AWS servers you place in your own data center  
+  | AWS Config        | Checks AWS resources continuously against rules; can alert or fix violations
+  | IAM/SCP Policies  | Restrict access or actions based on region; enforce org-wide rules
+
+
+
+## AWS for Government
+
+### What is Public Sector?
+
+- Public sectors include public goods and governmental services such as:
+  - Military
+  - Law enforcement
+  - Infrastructure
+  - Public transit
+  - Public Education
+  - Healthcare
+  - The government itself
+
+- AWS can be utilized by public sector or organizations developing cloud workloads for the public sector.
+- AWS achieves this by meeting **regulatory compliance programs** along with specific governance and security controls. 
+- AWS has special regions for US regulation called **GovCloud**.
+
+
+
+## Gov Cloud
+
+### Federal Risk and Authorization Management Program (FedRAMP)
+
+A US government-wide program that provides a standardized approach to security assessment, authorization, and continuous monitoring for cloud products and services. 
+
+### What is GovCloud?
+
+> Not particular to AWS, because Azure also has GovCloud.
+
+A Cloud Service Provider (CSP) generally will offer an **isolated region** to run FedRAMP workloads.
+
+### AWS GovCloud Regions
+
+Allow customers to host sensitive **Controlled Unclassified Information** and other types of regulated workloads.
+- GovCloud Regions are only operated by employees who are U.S. citizens, on U.S. soil.
+- They are **only** accessible to U.S. entities and root account holders who pass a screening process.
+
+Customers can architect secure cloud solutions that comply with:
+- FedRAMP High baseline
+- DOJ's Criminal Justice Information System (CJIS) Security Policy
+- U.S. International Administration Regulations (EAR)
+- Department of Defense (DoD) Cloud Computing Security Requirements Guide
+
+
+
+## AWS in China
+
+- AWS China is the AWS Cloud offerings in Mainland China.
+- AWS China is completely isolate *intentionally* from AWS Global to meet regulatory compliance for Mainland China.
+- AWS China is on its own domain at: [amazonaws.cn](amazonaws.cn).
+- In order to operate in a AWS China Region, you need to have a Chinese Business License (ICP license).
+- Not all services are available in China (e.g. Route53)
+- Running in Mainland China (instead of Singapore) means you would not need to traverse the The Great Firewall.
+- AWS has two Regions in Mainland China:
+  - **Ningxia** CN-NorthWest-1, operated by NSWCF
+  - **Beijing** CN-North-1, operated by SINNET
+  > AWS could not meet the compliance requirement so they had to partner with local providers/data centers.
+
+
+
+## AWS in China Follow Along
+
+Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **2:41:20 to 2:42:17**.
+
+
+
+## Sustainability
+
