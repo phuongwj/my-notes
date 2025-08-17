@@ -82,6 +82,8 @@ Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://ww
 
 ## Regions
 
+> Update 08/16/2025: It seems like AWS has updated their UI again. Regardless the contents should be somewhat the same.
+
 Regions are **geographically distinct locations** consisting of one or more Availability Zones. 
 
 ![AWS Regions](/aws-certified-cloud-practitioner/assets/regions.jpg "AWS Regions")
@@ -160,6 +162,8 @@ Data centers within a region will be isolate from each other (different building
 It's common practice to run workloads in at least 3 AZs to ensure services remain available in case one or two data centers fail. (High availability).
 
 AZs are represented by a Region Code, followed by a letter identifier e.g. **us-east-1a**.
+- `us-east-1` is the region
+- `a` represents the particular AZ in that region
 
 A Subnet is associated with an Availability Zone.
 
@@ -170,6 +174,8 @@ A lot of services don't even require you to choose a subnet because they're full
 Example of an architectural diagram, representing two AZs, the Subnets associated with those AZs, and EC2 instances (Virtual Machines) launched in those subnets.
 
 ![Example of an Architectural Diagram mentioned above](/aws-certified-cloud-practitioner/assets/azs-with-subnets.jpg "Example of an Architectural Diagram mentioned above")
+- `us-east-1` and `us-east-2` are regions
+- our 2 AZs `1a`, and `1b`, and they're also subnets
 
 ### Summary Table for clearer view:
 
@@ -183,25 +189,25 @@ Example of an architectural diagram, representing two AZs, the Subnets associate
 
 - Say we have a AWS Region and in this particular one, we have Canada (Central), which is Montreal => `ca-central-1`.
 
-![Visualization Representation part1](/aws-certified-cloud-practitioner/assets/repre-1.jpg "Visualization Representation part1")
+  ![Visualization Representation part1](/aws-certified-cloud-practitioner/assets/repre-1.jpg "Visualization Representation part1")
 
 - The idea here is that the region has multiple AZs, they are `ca-central-1a`, `ca-central-1b`, `ca-central-1d`.
 
-![Visualization Representation part2](/aws-certified-cloud-practitioner/assets/repre-2.jpg "Visualization Representation part2")
+  ![Visualization Representation part2](/aws-certified-cloud-practitioner/assets/repre-2.jpg "Visualization Representation part2")
 
 - Within our AZs, they are made up of **one or more** data centers, not a single data centers, but a collection of buildings. 
 
-![Visualization Representation part3](/aws-certified-cloud-practitioner/assets/repre-3.jpg "Visualization Representation part3")
+  ![Visualization Representation part3](/aws-certified-cloud-practitioner/assets/repre-3.jpg "Visualization Representation part3")
 
 - All AZs in an AWS Region are interconnected with high-bandwidth, low-latency networking, over fully redundant, dedicated metro fiber providing high-throughput, low-latency networking between (basically means very fast connection in between).
 
-![Visualization Representation part4](/aws-certified-cloud-practitioner/assets/repre-4.jpg "Visualization Representation part4")
+  ![Visualization Representation part4](/aws-certified-cloud-practitioner/assets/repre-4.jpg "Visualization Representation part4")
 
 - All traffic between AZs is encrypted. 
 
 - AZs are within 100km (60 miles) of each other.
 
-![Visualization Representation part5](/aws-certified-cloud-practitioner/assets/repre-5.jpg "Visualization Representation part5")
+  ![Visualization Representation part5](/aws-certified-cloud-practitioner/assets/repre-5.jpg "Visualization Representation part5")
 
 
 
@@ -226,15 +232,16 @@ You can have fault domains nested inside fault domains.
 A fault level is a collection of fault domains.
 
 The scope of a fault domain could be:
-- specific servers in a rack
-- an entire rack in a data center
-- an entire room in a data center
-- the entire data center building
+- Specific servers in a rack
+- An entire rack in a data center
+- An entire room in a data center
+- The entire data center building
+
 It's up to the Cloud Service Provider (CSPs) to define the boundaries of a domain. AWS abstracts it all away so you don't have to think about it. But just to compare it against Azure, you actually define your fault domain. You might say that "make sure this workload is never running on the same VM on the same rack for these things", and you might like that level of control.
 
 ![Fault Level & Fault Domain Example](/aws-certified-cloud-practitioner/assets/fault-ex.jpg "Fault Level & Fault Domain Example")
 
-Data centers can also have fault domains within them. Maybe that have one particular room and that room is secure, so like if there's fire in that room, it's not going to affect the other rooms. 
+Data centers can also have fault domains within them. Maybe that have one particular room and that room is secure, so like if there's fire in that room, it's not going to affect the other rooms (Although realistically, if there’s a fire in one room, the whole data center would probably catch on fire 😂).
 
 Each Amazon Region is designed to be completely **isolated** from the other Amazon Regions.
 - This achieves the greatest possible fault tolerance and stability.
