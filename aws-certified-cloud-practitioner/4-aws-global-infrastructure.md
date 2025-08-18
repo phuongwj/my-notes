@@ -75,6 +75,22 @@
 - [AWS in China Follow Along](#aws-in-china-follow-along)
 
 - [Sustainability](#sustainability)
+  - [1. Renewable Energy](#1-renewable-energy)
+  - [2. Cloud Efficiency](#2-cloud-efficiency)
+  - [3. Water Stewardship](#3-water-stewardship)
+
+- [Sustainability Follow Along](#sustainability-follow-along)
+
+- [AWS Ground Station](#aws-ground-station)
+
+- [AWS Outposts](#aws-outposts-1)
+  - [What is a Server Rack?](#what-is-a-server-rack)
+  - [Rack Heights](#rack-heights)
+  - [AWS Outposts 3 Form Factors](#aws-outposts-3-form-factors)
+    - [42U](#42u-a-full-rack-of-servers-provided-by-aws)
+    - [1U](#1u-servers-that-you-can-place-into-your-existing-racks)
+    - [2U](#2u-servers-that-you-can-place-into-your-existing-racks)
+    
 
 ## AWS Global Infrastructure Overview
 
@@ -599,16 +615,16 @@ Amazon co-founded the Climate Pledge to achieve Net-Zero Carbon Emissions by 204
 
 AWS Cloud's Sustainability goals are composed of three parts:
 
-1. Renewable Energy
+### 1. Renewable Energy
 - AWS is working towards having their AWS Global Infrastructure powered by 100% renewable energy by 2025.
 - AWS purchases and retires environmental attributes to cover the non-renewable energy for AWS Global Infrastructure:
   - Renewable Energy Credits (RECs)
   - Guarantees of Origin (GOs)
 
-2. Cloud Efficiency
+### 2. Cloud Efficiency
 - AWS's infrastructure is 3.6 times more energy efficient than the median of U.S. enterprise data centers surveyed.
 
-3. Water Stewardship
+### 3. Water Stewardship
 - Direct evaporative technology to cool our data center.
 - Use of non-potable water for cooling purposes (recycled water).
 - On-site water treatment allow us to remove scale-forming minerals and reuse water for more cycles.
