@@ -594,3 +594,83 @@ Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://ww
 
 ## Sustainability
 
+Amazon co-founded the Climate Pledge to achieve Net-Zero Carbon Emissions by 2040 across all of Amazon's business (this includes AWS)
+[sustainability.aboutamazon.com](sustainability.aboutamazon.com)
+
+AWS Cloud's Sustainability goals are composed of three parts:
+
+1. Renewable Energy
+- AWS is working towards having their AWS Global Infrastructure powered by 100% renewable energy by 2025.
+- AWS purchases and retires environmental attributes to cover the non-renewable energy for AWS Global Infrastructure:
+  - Renewable Energy Credits (RECs)
+  - Guarantees of Origin (GOs)
+
+2. Cloud Efficiency
+- AWS's infrastructure is 3.6 times more energy efficient than the median of U.S. enterprise data centers surveyed.
+
+3. Water Stewardship
+- Direct evaporative technology to cool our data center.
+- Use of non-potable water for cooling purposes (recycled water).
+- On-site water treatment allow us to remove scale-forming minerals and reuse water for more cycles.
+- Water efficiency metrics to determine and monitor optimal water use for each AWS Region.
+
+
+
+## Sustainability Follow Along
+
+Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **2:44:08 to 2:42:17**.
+
+
+
+## AWS Ground Station
+
+- **AWS Ground Station** is a fully managed service that **lets you control satellite communications**, process data, and scale your operations without having to worry about building or managing your own ground station infrastructure.
+- Use cases for Ground Station:
+  - Weather forecasting
+  - Surface imaging
+  - Communications
+  - Video broadcasts
+- To use Ground Station:
+  - You schedule a Contact (select satellite, start and end time, and the ground location)
+  - Use the AWS Ground Station EC2 AMI to launch EC2 instances that will uplink and downlink data during the contact or receive downlinked data in an Amazon S3 bucket. 
+- Use case: A company reaches an agreement with a Satellite Imagery Provider to take satellite photos of a specific region. They use AWS Ground Station to communicate that company's Satellite and download the S3 image data.
+
+
+
+## AWS Outposts
+
+- **AWS Outposts** is a fully managed service that offers the same AWS infrastructure, AWS services, APIs, and tools to virtually any data center, co-location space, or on-premises facility for a truly consistent hybrid experience.
+
+- AWS Outposts is a rack of servers running AWS Infrastructure on your physical location.
+
+### What is a Server Rack?
+
+- A frame design to hod and organize IT equipment.
+
+  ![42U Rack](/aws-certified-cloud-practitioner/assets/a-rack.jpg "42U Rack")
+
+### Rack Heights
+
+- U stands for *rack units* or *U spaces*, equal to 1.75 inches.
+- The industry standard rack size is 48U (7 Foot Rack).
+
+### AWS Outposts 3 form factors
+
+#### 42U (A full rack of servers provided by AWS)
+- A full rack of servers provided by AWS
+- AWS delivers it to your preferred physical site fully assembled and ready to be rolled into final position. 
+- It is installed by AWS and the rack needs to be simply plugged into power and network.
+
+#### 1U (Servers that you can place into your existing racks)
+- Suitable for 19-inch wide
+- 24-inch deep cabinets
+- AWS Graviton2 (up to 64 vCPUs)
+- 128 GiB memory
+- 4 TB of local NVMe storage
+
+#### 2U (Servers that you can place into your existing racks)
+- Suitable for 19-inch wide
+- 36-inch deep cabinets
+- Intel processor (up to 128 vCPUs)
+- 256 GiB memory
+- 8TB of local NVMe storage
