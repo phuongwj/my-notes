@@ -40,7 +40,7 @@
 
     ![Example of a service running across AZs](/aws-certified-cloud-practitioner/assets/high-avail.jpg "Example of a service running across AZs")
 
-- To accomplish **high availability** and avoid *a single point of failure*, we use something called **Elastic Load Balancer**
+- To accomplish **high availability** and avoid *a single point of failure*, we use something called [**Elastic Load Balancer**](#elastic-load-balancer)
 
 ### Elastic Load Balancer
 
@@ -51,3 +51,88 @@ A load balancer allows you to evenly distribute traffic to multiple servers in o
 
 
 ## High Scalability
+
+- Your ability to **increase your capacity** based on the increasing demand of traffic, memory and computing power.
+
+### Vertical Scaling
+- Scaling *Up* - Upgrade to a bigger server
+
+### Horizontal Scaling
+- Scaling *Out* - Add more servers of the same size
+
+> The good thing about both Vertical and Horizontal Scaling is that you're also going to get **high availability**. So if you do need two servers, it's always better to add an additional server as oppose to having a larger server, but it's going to be very dependent on a lot of factors.
+
+
+
+## High Elasticity
+
+- Your ability to **automatically** increase or decrease your capacity based on the current demand of traffic, memory and computing power.
+- To increase being **highly elastic**, we use [**Auto Scaling Groups (ASG)**](#auto-scaling-groups-asg).
+
+### Horizontal Scaling
+- Scaling **Out** - Add more servers of the same size
+- Scaling **In** - Removing underutilized servers of the same size
+
+### Vertical Scaling
+- Generally hard for traditional architecture so you'll usually only see horizontal scaling described with **Elasticity**.
+
+### Auto Scaling Groups (ASG)
+
+A AWS feature that will automatically add or remove servers based on scaling rules you define based on metrics.
+
+
+
+## Fault Tolerance
+
+- Your ability for your service to ensure there is *no single point of failure*. **Preventing the chance of failure**.
+- To prevent the chance of failure, we use [**Fail-overs**](#fail-overs)
+
+### Fail-overs
+- When you have a plan to **shift traffic** to a redundant system in case the primary system fails.
+- Example:
+    - Having a copy (secondary) of your database where all ongoing changes are synced. The secondary system is not in-use until a fail over occurs and it becomes the primary database.
+        > When we're talking about a backup (copy) of databases on AWS, this is a concept of [**RDS Multi-AZ**](#rds-multi-az).
+
+#### RDS Multi-AZ
+
+- It is when you run a duplicate standby database in another Availability Zone in case your primary database fails.
+
+
+
+## High Durability
+
+- Your ability to **recover** from a disaster and to prevent **the loss** of data.
+- Solution that recover from a disaster is known as **Disaster Recovery (DR)**.
+    - Do you have a backup?
+    - How fast can you restore that backup?
+    - Does your backup still work?
+    - How do you ensure current live data is not corrupt?
+        > A solution to this in AWS is something called [**CloudEndure Disaster Recovery**](#cloudendure-disaster-recovery)
+
+### CloudEndure Disaster Recovery
+
+- It continuously replicates your machines into a low-cost staging area in your target AWS account and preferred Region enabling fast and reliable recovery in case of IT data center failures. 
+
+
+
+## Business Continuity Plan (BCP)
+
+- A **Business Continuity Plan (BCP)** is a document that outlines how a business will continue operating **during an unplanned disruption in services**.
+- Example here we have a disaster, we can also see that there are chances of getting durations lik Data Loss and Downtime, and the two factors [**RPO**](#recovery-point-objective-rpo), [**RTO**](#recovery-time-objective-rto) are going to define the length of the durations.
+
+    ![Example of a disaster](/aws-certified-cloud-practitioner/assets/disaster.jpg "Example of a disaster")
+
+### Recovery Point Objective (RPO)
+
+- The maximum acceptable amount of data loss after an unplanned data-loss incident, expressed as an amount of time.
+- *"How much data are you willing to lose?"*
+
+### Recovery Time Objective (RTO)
+
+- The maximum amount of downtime your business can tolerate without incurring a significant financial loss. 
+- *"How much time are you willing to go down?"*
+
+
+
+## Disaster Recovery Options
+
