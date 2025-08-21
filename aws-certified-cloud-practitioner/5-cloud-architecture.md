@@ -9,6 +9,40 @@
     + [Elastic Load Balancer](#elastic-load-balancer)
 
 - [High Scalability](#high-scalability)
+    + [Vertical Scaling](#vertical-scaling)
+    + [Horizontal Scaling](#horizontal-scaling)
+
+- [High Elasticity](#high-elasticity)
+    + [Horizontal Scaling](#horizontal-scaling-1)
+    + [Vertical Scaling](#vertical-scaling-1)
+    + [Auto Scaling Groups (ASG)](#auto-scaling-groups-asg)
+
+- [Fault Tolerance](#fault-tolerance)
+    + [Fail-overs](#fail-overs)
+        + [RDS Multi-AZ](#rds-multi-az)
+
+- [High Durability](#high-durability)
+    + [CloudEndure Disaster Recovery](#cloudendure-disaster-recovery)
+
+- [Business Continuity Plan (BCP)](#business-continuity-plan-bcp)
+    + [Recovery Point Objective (RPO)](#recovery-point-objective-rpo)
+    + [Recovery Time Objective (RTO)](#recovery-time-objective-rto)
+
+- [Disaster Recovery Options](#disaster-recovery-options)
+    + [Backup & Restore](#backup--restore)
+    + [Pilot Light](#pilot-light)
+    + [Warm Standby](#warm-standby)
+    + [Multi-site Active/active](#multi-site-activeactive)
+
+- [RTO Visualized](#rto-visualized)
+    + [What the Graph Shows](#what-the-graph-shows)
+    + [Where They Meet](#where-they-meet)
+    + [Placement of the DR Strategies](#placement-of-the-dr-strategies)
+
+- [RPO Visualized](#rpo-visualized)
+    + [What the Graph Shows](#what-the-graph-shows-1)
+    + [Where They Meet](#where-they-meet-1)
+    + [Placement of the DR Strategies](#placement-of-the-dr-strategies-1)
 
 ## Cloud Architecture Terminologies
 
