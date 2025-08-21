@@ -136,3 +136,112 @@ A AWS feature that will automatically add or remove servers based on scaling rul
 
 ## Disaster Recovery Options
 
+There are multiple options for recovery that trade cost vs time to recover. Sometimes, this is represented vertically or even horizontally if you want.
+
+![Example of a horizontally representation](/aws-certified-cloud-practitioner/assets/horizontal.jpg "Example of a horizontally representation")
+
+The picture below will show the **Disaster Recovery strategies** in the AWS Cloud. Each option is a trade-off between **cost** (how much you spend to keep the backup resources running) and **recovery time** (how quickly you can get back online after a failure).
+
+![Example of recovery strategies](/aws-certified-cloud-practitioner/assets/horizontal-strats.jpg "Example of recovery strategies")
+
+> **Low** can also be represented as **Cold** and **High** can also be represented as **Hot**.
+
+### Backup & Restore
+
+- **How it works:** You backup your data and restore it onto new infrastructure
+- **RPO/RTO:** *Hours*
+- **Use cases:** Lower priority systems
+- **Cost:** $ (lowest)
+- **Drawback:** Infrastructure needs to be redeployed after the event
+
+### Pilot Light
+
+- **How it works:** Data is replicated to another region with the minimal services running
+- **RPO/RTO:** *10 minutes*
+- **Use cases:** Core services that must come back quickly but don't require full capacity right away
+- **Cost:** $$
+- **Drawback:** Scaling and deployment needed before returning to full operating
+
+### Warm Standby
+
+-**How it works:** Run a **scaled-down** but functional copy of your infrastructure. If disaster strikes, scale it up to full production capacity
+- **RPO/RTO:** *Minutes*
+- **Use cases:** Business-critical services that require faster recovery
+- **Cost:** $$$
+- **Drawback:** Still some scaling required before full recovery
+
+### Multi-site Active/active
+
+- **How it works:** Run full production environments in two (or more) regions simultaneously, sharing traffic. If one fails, traffic shifts instantly to the other
+- **RPO/RTO:** *Real-time*
+- **Use cases:** Mission-critical services where downtime and data loss are unacceptable
+- **Cost:** $$$$
+- **Benefit:** Zero downtime, near-zero data loss
+
+
+
+## RTO Visualized
+
+Recap: **Recovery Time Objective (RTO)** is the maximum acceptable delay between the interruption of service and restoration of service. This objective determines what is considered an acceptable time window when service is unavailable and is defined by the organization. 
+
+![RTO Graph](/aws-certified-cloud-practitioner/assets/rto-visual.jpg "RTO Graph")
+
+### What the Graph Shows
+
+- **X-axis:** Length of Service Interruption (how long your system is down)
+- **Y-axis:** Cost and Complexity
+- Two main curves:
+    1. Blue curve = Recovery Cost
+        - How much it costs to **build and maintain** a recovery strategy.
+        - Example: Multi-site active/active costs a lot upfront (duplicate infrastructure) while Backup & Restore is cheap.
+    2. Red curve = Cost of Business Impact
+        - How much money/business you lose the longer the system is unavailable.
+        - Example: If Amazon.com goes down for 1 hour, they lose millions -> their curve rises steeply.
+
+### Where They Meet:
+
+- The point where the **Recovery Cost (blue)** and **Business Impact Cost (red)** intersect is the **optimal trade-off**.
+- That's where your chosen **RTO* should sit.
+- In other words:
+    - Too far left -> You're overspending on recovery.
+    - Too far right -> Downtime is too costly.
+
+### Placement of the DR Strategies:
+- **Backup & Restore** (Far right): cheap to maintain, but recovery takes hours, so business cost skyrockets.
+- **Pilot Light** (Middle): moderate cost, recovery in minutes.
+- **Warm Standby** (Left middle): higher cost, faster recovery
+- **Multi-site Active/Active** (Far left): very high cost, but instant recovery (near zero downtime)
+
+
+
+## RPO Visualized
+
+Recap: **Recovery Point Objective (RPO)** is the maximum acceptable amount of time since the last data recovery point. This objective determines what is considered an acceptable loss of data between the last recovery point and the interruption of service and is defined by the organization.
+
+![RTO Graph](/aws-certified-cloud-practitioner/assets/rpo-visual.jpg "RTO Graph")
+
+### What the Graph Shows
+
+- **X-axis:** Data Loss before Service Interruption (how much data are you willing to lose, measured in time since the last backup or replication)
+- **Y-axis:** Cost and Complexity
+- Two main curves:
+    1. Blue curve = Recovery Cost
+        - How much it costs to **build and maintain** a recovery solution that minimizes data loss.
+        - Example: Multi-site active/active is expensive but minimizes data loss, while Backup & Restore is cheap but allows for more data loss.
+    2. Red curve = Cost of Business Impact
+        - How much money/business you lose as data loss increases.
+        - Example: If you lose hours of data, the business impact can be severe, especially for critical systems.
+
+### Where They Meet:
+
+- The point where the **Recovery Cost (blue)** and **Business Impact Cost (red)** intersect is the **optimal trade-off**.
+- That's where your chosen **RPO** should sit.
+- In other words:
+    - Too far left → You're overspending to prevent any data loss.
+    - Too far right → Data loss is too costly for the business.
+
+### Placement of the DR Strategies:
+- **Backup & Restore** (Far right): cheapest to maintain, but you risk losing hours of data.
+- **Pilot Light** (Middle): moderate cost, less data loss.
+- **Warm Standby** (Left middle): higher cost, minimal data loss.
+- **Multi-site Active/Active** (Far left): highest cost, but near-zero data loss.
