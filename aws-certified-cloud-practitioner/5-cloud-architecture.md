@@ -44,6 +44,11 @@
     + [Where They Meet](#where-they-meet-1)
     + [Placement of the DR Strategies](#placement-of-the-dr-strategies-1)
 
+- [Architectural Diagram Example](#architectural-diagram-example)
+
+- [HA (High Availability) Follow Along](#ha-high-availability-follow-along)
+    + [Overview](#overview)
+
 ## Cloud Architecture Terminologies
 
 ### What is a Solutions Architect?
@@ -279,3 +284,35 @@ Recap: **Recovery Point Objective (RPO)** is the maximum acceptable amount of ti
 - **Pilot Light** (Middle): moderate cost, less data loss.
 - **Warm Standby** (Left middle): higher cost, minimal data loss.
 - **Multi-site Active/Active** (Far left): highest cost, but near-zero data loss.
+
+
+
+## Architectural diagram example 
+
+> Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:01:51 to 3:09:02**.
+
+In this section, Andrew Brown will be showing a real-world architectural diagram. He's hoping that by giving this exposure will give us some information to how the services work together. 
+
+To create the architecture diagram, you'll be needing the AWS Architecture Icons to add them to your diagram. You can check it out [here](https://aws.amazon.com/architecture/icons/)
+
+
+
+## HA (High Availability) Follow Along 
+
+> Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:09:04 to 3:12:40**.
+
+### Overview
+
+- **Some AWS services are highly available by default** (e.g., certain managed services in the standard tier), so users don't have to configure HA themselves.
+- **EC2 (Elastic Compute Cloud):**
+    - By default, if you launch a single EC2 instance, it's not highly available (since it runs on one server in one AZ).
+    - To achieve HA, you need to launch multiple EC2 instances across different AZs and then set up a **load balancer** to route traffic.
+    - This requires manual setup and configuration.
+- **Elastic Beanstalk (PaaS):**
+    - Makes HA easier because it can automatically set up the underlying infrastructure.
+    - You can choose between a **single instance (cheaper, good for dev/test)** or a **highly available environment**.
+    - If you pick HA, Elastic Beanstalk provisions an **Application Load Balancer, Auto Scaling groups, and multiple instances** for you automatically.
+- **RDS (Relational Database Service):**
+    - When creating a database (e.g., PostgreSQL), AWS gives you options: **Dev/Test** vs **Production**
+    - Production usually means **multi-AZ deployment** (replicating the database to another AZ for redundancy).
+    - This provides failover, replication, and HA features automatically.
