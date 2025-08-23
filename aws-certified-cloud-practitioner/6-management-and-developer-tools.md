@@ -28,5 +28,3 @@
 ## AWS API Follow Along
 
 Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:14:37 to  **.
-
-testing if things work 
