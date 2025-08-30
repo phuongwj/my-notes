@@ -2,8 +2,27 @@
 
 - [AWS Application Programming Interface (API)](#aws-application-programming-interface-api)
     + [What is an Application Programming Interface (API)?](#what-is-an-application-programming-interface-api)
+    + [AWS API Follow Along](#aws-api-follow-along)
 
-- [AWS API Follow Along](#aws-api-follow-along)
+- [AWS Management Console](#aws-management-console)
+    + [AWS Management Console Follow Along](#aws-management-console-follow-along)
+
+- [Service Console](#service-console)
+    + [Service Console Follow Along](#service-console-follow-along)
+
+- [AWS Account ID](#aws-account-id)
+    + [AWS Account ID Follow Along](#aws-account-id-follow-along)
+
+- [AWS Tools for PowerShell](#aws-tools-for-powershell)
+    + [What is PowerShell?](#what-is-powershell)
+    + [AWS Tools for PowerShell Follow Along](#aws-tools-for-powershell-follow-along)
+
+- [Amazon Resource Names (ARNs)](#amazon-resource-names-arns)
+    + [Why do we need ARNs?](#why-do-we-need-arns)
+    + [Structure and format of ARNs](#structure-and-format-of-arns)
+    + [Paths in ARNs](#paths-in-arns)
+
+
 
 ## AWS Application Programming Interface (API)
 
@@ -23,9 +42,7 @@
 
 ![Example of services that we can interact with the API](/aws-certified-cloud-practitioner/assets/api-rare.jpg "Example of services that we can interact with the API")
 
-
-
-## AWS API Follow Along
+### AWS API Follow Along
 
 Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:14:37 to 3:16:52**.
 
@@ -40,9 +57,7 @@ The AWS Management Console is located at [console.aws.amazon.com](console.aws.am
 Point and Click to manually launch and configure AWS resources with limited programming knowledge.
 > This is known as **ClickOps** since you can perform all your system operations via clicks. 
 
-
-
-## AWS Management Console Follow ALong
+### AWS Management Console Follow Along
 
 Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:17:44 to 3:20:06**.
 
@@ -71,9 +86,7 @@ Some AWS Service Console will act as an umbrella console containing many AWS ser
 
 > Say if you want to go the security group of EC2, there won't be any security group console, but it will be under the EC2 Console. 
 
-
-
-## Service Console Follow Along
+### Service Console Follow Along
 
 Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:21:10 to 3:24:28**.
 
@@ -100,9 +113,7 @@ The AWS Account ID is used
 
 It is generally good to keep your Account ID private as it is one of many components used to identify an account for attack by a malicious actor. 
 
-
-
-## AWS Account ID Follow Along
+### AWS Account ID Follow Along
 
 Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:25:31 to 3:29:11**.
 
@@ -119,9 +130,7 @@ Unlike most shells, which accept and return text, PowerShell is built on top of 
 **AWS Tools for Powershell** lets you interact ith the AWS API via PowerShell Cmdlets.
 > Cmdlet is a special type of command in PowerShell in the form of capitalized verb-and-noun e.g. *New-S3Bucket*.
 
-
-
-## AWS Tools for PowerShell Follow Along
+### AWS Tools for PowerShell Follow Along
 
 > Andrew Brown said this is not included in the exam, but he still wanted to show us what it looks like, if you're interested, the time stamp is mentioned below.
 
