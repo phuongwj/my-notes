@@ -15,7 +15,7 @@
 
 - [AWS Tools for PowerShell](#aws-tools-for-powershell)
     + [What is PowerShell?](#what-is-powershell)
-    + [AWS Tools for PowerShell Follow Along](#aws-tools-for-powershell-follow-along)
+    +   [AWS Tools for PowerShell Follow Along](#aws-tools-for-powershell-follow-along)
 
 - [Amazon Resource Names (ARNs)](#amazon-resource-names-arns)
     + [Why do we need ARNs?](#why-do-we-need-arns)
@@ -205,3 +205,7 @@ Examples:
     - arn:aws:iam::123456789012:user/Development/product_1234/*
 - **S3 ARN Path**
     - arn:aws:s3:::my_corporate_bucket/Development/*
+
+### ARN Follow Along
+
+Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:39:35 to 3:41:52**.
