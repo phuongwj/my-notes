@@ -338,3 +338,23 @@ Since CDK generates out CloudFormation, it's still important to be able to read 
 ### CloudFormation Follow Along
 
 Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **4:15:30 to 4:30:29**.
+
+
+
+## Cloud Development Kit (CDK)
+
+AWS CDK allows you to use your favorite programming language to write Infrastructure as Code (IaC), such as TypeScript, NodeJs, Python, Java, ASP.NET.
+
+- CDK is powered by CloudFormation (it generates out CloudFormation templates)
+- CDK has a large library of reusable cloud components called CDK Construct [https://constructs.dev](https://constructs.dev)
+- CDK comes with its own CLI
+- CDK pipelines to quickly setup CI/CD pipelines for CDK projects
+- CDK has a testing framework for Unit and Integration Testing
+
+> AWS SDK looks similar, but the key difference is CDK ensures Idempotent of your Infrastructure.
+> **Idempotent** means that if you use the CDK to say "give me virtual machines", you'll always have 1 virtual machines, because it's trying to manage the state of the file, whereas if you use SDK, you'll end up with more and more servers, and it's not a managing state. 
+
+### CDK Follow Along
+
+Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **4:32:44 to 4:41:23**.
+
