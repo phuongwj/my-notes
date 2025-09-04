@@ -290,3 +290,33 @@ Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://ww
 - Bash
 - PowerShell
 - Zsh
+
+
+
+## Infrastructure as Code (IaC)
+
+You write a configuration script to **automate creating, updating or destroying** cloud infrastructure. 
+- IaC is a **blueprint** of your infrastructure.
+- IaC allows you to easily **share, version or inventory** your cloud infrastructure.
+
+AWS has two offerings for writing Infrastructure as Code.
+
+### AWS CloudFormation (CFN)
+
+CFN is a Declarative IaC tool.
+
+**Declarative**
+- What you see is what you get. ***Explicit***
+- More verbose, but zero chance of mis-configuration
+- Uses scripting languages e.g. JSON, YAML, XML 
+
+### AWS Cloud Development Kit (CDK)
+
+CDK is an Imperative IaC tool.
+
+**Imperatiev**
+- You say what you want, and the rest is filled in. ***Implicit***
+- Less verbose, you could end up with misconfiguration
+- Use programming languages e.g. Python, JavaScript
+
+
