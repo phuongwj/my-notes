@@ -272,3 +272,21 @@ AWS SDK is offered in various programming languages:
 
 Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:56:51 to 4:11:51**.
 
+
+
+## AWS CloudShell
+
+**AWS CloudShell** is a **browser-based shell** built into the AWS Managemen Console. AWS CloudShell is scoped per region, same credentials as logged in user. Free service!
+
+> If you have a hard time setting up your own shell or terminal on your computer, or maybe you just don't have access or privilege to do so, AWS has available to you, just click on the **shell icon**.
+
+**Preinstalled Tools:** AWS CLI, Python, Node.js, git, make, pip, sudo, tar, tmux, vim, wget, and zip and more.
+
+**Storage incuded:** 1 GB o fstorage free per AWS region.
+
+**Saved files and settings:** Files saved in your home directory are available in future sessions for the same AWS region.
+
+**Shell Environments**. Seamlessly switch between:
+- Bash
+- PowerShell
+- Zsh
