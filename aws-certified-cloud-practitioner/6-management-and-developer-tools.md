@@ -320,3 +320,21 @@ CDK is an Imperative IaC tool.
 - Use programming languages e.g. Python, JavaScript
 
 
+
+## CloudFormation
+
+AWS CloudFormation allows you to write Infrastructure as Code (IaC) as either a **JSON** or **YAML** file.
+
+![Example of the yaml code](/aws-certified-cloud-practitioner/assets/yaml.jpg "Example of the yaml code")
+
+> Example of YAML file.
+
+CloudFormation is simple but it can lead to large filesor is limited in some regard to creating dynamic or repeatable infrastructure compared to CDK.
+
+CloudForamtion can be easier for DevOps Engineers who do not have a background in web programming languages.
+
+Since CDK generates out CloudFormation, it's still important to be able to read and understand CloudFormation in order to debug IaC stacks. 
+
+### CloudFormation Follow Along
+
+Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **4:15:30 to 4:30:29**.
