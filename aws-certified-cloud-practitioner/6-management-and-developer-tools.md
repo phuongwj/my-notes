@@ -242,9 +242,33 @@ Allows users to programmatically interact with the AWS API via intering **single
 - The AWS CLi is a Pyhon executable program.
     + Python is required to install AWS CLI
 
--The AWS Cli can be installed on Windows, Mac or Linux/Unix
+- The AWS Cli can be installed on Windows, Mac or Linux/Unix
 - The name of the CLI program is **aws**.
 
 ### AWS CLI Follow Along 
 
 Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:43:41 to 3:56:04**.
+
+
+
+## AWS Software Development Kit (SDK)
+
+A Software Development Kit (SDK) is **a collection of software development tools** in *one installable package*.
+
+You can use the **AWS SDK** to programmaticallyc reate, modify, delete or interact with AWS resources.
+
+AWS SDK is offered in various programming languages:
+- Java
+- Python
+- Node.js
+- Ruby
+- Go
+- .NET
+- PHP
+- JavaScript
+- C++
+
+### AWS SDK Follow Along 
+
+Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:56:51 to 4:11:51**.
+
