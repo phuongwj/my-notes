@@ -209,3 +209,42 @@ Examples:
 ### ARN Follow Along
 
 Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:39:35 to 3:41:52**.
+
+
+
+## AWS Command Line Interface (CLI)
+
+### What is a CLI?
+
+A Command Line Interface (CLI) **processes commands to a computer program in the from of lines of text**. Opearting systems implement a command-line interface in a shell. 
+
+### What is a Terminal?
+
+A terminal is a text only interface (input/output environment)
+
+### What is a Console?
+
+A console is a physical computer to physically input information into a terminal
+
+### What is a Shell?
+
+A shell is the command line program that users interact with to input commands. Popular shell programs:
+- Bash
+- Zsh
+- Powershell
+
+> People commonly use **Terminal, Shell or Console** to generally describe interacting with a Shell. 
+
+### AWS CLI
+
+Allows users to programmatically interact with the AWS API via intering **single or multi-line commands** into a shell or terminal.
+
+- The AWS CLi is a Pyhon executable program.
+    + Python is required to install AWS CLI
+
+-The AWS Cli can be installed on Windows, Mac or Linux/Unix
+- The name of the CLI program is **aws**.
+
+### AWS CLI Follow Along 
+
+Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **3:43:41 to 3:56:04**.
