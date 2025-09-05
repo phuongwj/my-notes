@@ -358,3 +358,94 @@ AWS CDK allows you to use your favorite programming language to write Infrastruc
 
 Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **4:32:44 to 4:41:23**.
 
+
+
+## AWS Toolkit for VSCode
+
+AWS Toolkit is an open-source plugin for VSCode to create, debug, deploy AWS resources.
+
+### 1. AWS Explorer
+
+Explore a wide range of AWS resources to your linked AWS Account (Sometimes you can view them, sometimes you can delete them, it varies because it's based on what's available there with the service).
+
+![Example of AWS Explorer](/aws-certified-cloud-practitioner/assets/aws-exp.jpg "Example of the AWS Explorer")
+
+### 2. AWS CDK Explorer
+
+Allows you to explore your stacks defined by CDK.
+
+![Example of the AWS CDK Explorer](/aws-certified-cloud-practitioner/assets/aws-cdk-exp.jpg "Example of the AWS CDK Explorer")
+
+### 3. Amazon Elastic Container Service
+
+Provides IntelliSense for ECS task-definitions files
+
+> IntelliSense means that when you type, you'll get auto-completion but you'll also get description as to what it is that you're typing of 
+
+![Example of the Amazon Elastic Container Service](/aws-certified-cloud-practitioner/assets/amazon-ec-serv.jpg "Example of the Amazon Elastic Container Service")
+
+### 4. Serverless Applications
+
+Create, debug and deploy serverless applications via SAM and CFN (pretty much the main reason to have AWS Toolkit)
+
+![Example of the Serverless Applications](/aws-certified-cloud-practitioner/assets/serverless-app.jpg "Example of the Serverless Applications")
+
+
+
+## Access Keys 
+
+**Access Keys** is a ***key and secret*** required to have programmatic access to AWS resources wen interacting wth the AWS API outside of the AWS Managemenet Console.
+
+> An Access Key is commonly referred to as **AWS Credentials** (not necessarily the username and password to login).
+
+A user must be *granted access* to use Access Keys.
+
+![Example of the Access Key](/aws-certified-cloud-practitioner/assets/acc-key.jpg "Example of the Access Key")
+
+> When you're creating a user, you can just checkbox "Access Key". You can always do this after creating a user but it's good to do that as you're creating the user.
+
+You can **generate** an Access Key and Secret
+
+![Example of the Access Key and Secret](/aws-certified-cloud-practitioner/assets/acc-key-secret.jpg "Example of the Access Key and Secret")
+
+- Never share your access keys
+- Never commit access keys to a codebase
+- You can have two active Access Keys
+- You can deactive Access Keys
+- Access Keys have whatever access a user has to AWS resources
+
+Access Keys are to be stored in `~/.aws/credentials` and follow a TOML file format.
+
+> The `~` represents your home folder `.aws` means it's a hidden folder.
+
+![Example of the TOML file that stores aws credentials](/aws-certified-cloud-practitioner/assets/toml-file.jpg "Example of the TOML file that stores aws credentials")
+
+> **Default** will be the access key used when no profile is specified.
+> You can store multiple acess keys by giving the **profile** names
+
+![Example of the `aws configure`](/aws-certified-cloud-practitioner/assets/aws-config.jpg "Example of the `aws configure`")
+
+> You can use the **aws configure** CLI command to populate the credential file
+
+![Example of the AWS SDK](/aws-certified-cloud-practitioner/assets/aws-sdk.jpg "Example of the the AWS SDK")
+
+> The AWS SDK will automatically read from these environment variables.
+> This is the safe way of using an Access Key within your code. 
+
+### Access Keys Follow Along
+
+Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **4:44:56 to 4:46:49**.
+
+
+
+## AWS Documentation
+
+**AWS Documentation** is *a large collection of technical documentation* on how to use AWS Services. You can find it at [docs.aws.amazon.com](docs.aws.amazon.com).
+
+AWS is very good about providing detailed information about every AWS service.
+
+The basis of this course and for any AWS Certification will derive mostly from the AWS Documentation.
+
+### AWS Documentation Follow Along
+
+Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://www.youtube.com/watch?v=NhDYbskXRgc&t=7092s&ab_channel=freeCodeCamp.org) from **4:47:48 to 4:50:11**.
