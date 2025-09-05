@@ -21,6 +21,42 @@
     + [Why do we need ARNs?](#why-do-we-need-arns)
     + [Structure and format of ARNs](#structure-and-format-of-arns)
     + [Paths in ARNs](#paths-in-arns)
+    + [ARN Follow Along](#arn-follow-along)
+
+- [AWS Command Line Interface (CLI)](#aws-command-line-interface-cli)
+    + [What is CLI?](#what-is-a-cli)
+    + [What is a Terminal?](#what-is-a-terminal)
+    + [What is a Console?](#what-is-a-console)
+    + [What is a Shell?](#what-is-a-shell)
+    + [AWS CLI](#aws-cli)
+    + [AWS CLI Follow Along](#aws-cli-follow-along)
+
+- [AWS Software Development Kit (SDK)](#aws-software-development-kit-sdk)
+    + [AWS SDK Follow Along](#aws-sdk-follow-along)
+
+- [AWS CloudShell](#aws-cloudshell)
+
+- [Infrastructure as Code (IaC)](#infrastructure-as-code-iac)
+    + [AWS CloudFormation (CFN)](#aws-cloudformation-cfn)
+    + [AWS Cloud Development Kit (CDK)](#aws-cloud-development-kit-cdk)
+
+- [CloudFormation](#cloudformation)
+    + [CloudFormation Follow Along](#cloudformation-follow-along)
+
+- [Cloud Development Kit (CDK)](#cloud-development-kit-cdk)
+    + [CDK Follow Along](#cdk-follow-along)
+
+- [AWS Toolkit for VSCode](#aws-toolkit-for-vscode)
+    + [1. AWS Explorer](#1-aws-explorer)
+    + [2. AWS CDK Explorer](#2-aws-cdk-explorer)
+    + [3. Amazon Elastic Container Service](#3-amazon-elastic-container-service)
+    + [4. Serverless Applications](#4-serverless-applications)
+
+- [Access Keys](#access-keys)
+    + [Access Keys Follow Along](#access-keys-follow-along)
+
+- [AWS Documentation](#aws-documentation)
+    + [AWS Documentation Follow Along](#aws-documentation-follow-along)
 
 
 
@@ -216,7 +252,7 @@ Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://ww
 
 ### What is a CLI?
 
-A Command Line Interface (CLI) **processes commands to a computer program in the from of lines of text**. Opearting systems implement a command-line interface in a shell. 
+A Command Line Interface (CLI) **processes commands to a computer program in the from of lines of text**. Operating systems implement a command-line interface in a shell. 
 
 ### What is a Terminal?
 
@@ -237,9 +273,9 @@ A shell is the command line program that users interact with to input commands. 
 
 ### AWS CLI
 
-Allows users to programmatically interact with the AWS API via intering **single or multi-line commands** into a shell or terminal.
+Allows users to programmatically interact with the AWS API via entering **single or multi-line commands** into a shell or terminal.
 
-- The AWS CLi is a Pyhon executable program.
+- The AWS CLi is a Python executable program.
     + Python is required to install AWS CLI
 
 - The AWS Cli can be installed on Windows, Mac or Linux/Unix
@@ -255,7 +291,7 @@ Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://ww
 
 A Software Development Kit (SDK) is **a collection of software development tools** in *one installable package*.
 
-You can use the **AWS SDK** to programmaticallyc reate, modify, delete or interact with AWS resources.
+You can use the **AWS SDK** to programmatically create, modify, delete or interact with AWS resources.
 
 AWS SDK is offered in various programming languages:
 - Java
@@ -276,13 +312,13 @@ Feel free to check the [freeCodeCamp Youtube video from Andrew Brown](https://ww
 
 ## AWS CloudShell
 
-**AWS CloudShell** is a **browser-based shell** built into the AWS Managemen Console. AWS CloudShell is scoped per region, same credentials as logged in user. Free service!
+**AWS CloudShell** is a **browser-based shell** built into the AWS Management Console. AWS CloudShell is scoped per region, same credentials as logged in user. Free service!
 
 > If you have a hard time setting up your own shell or terminal on your computer, or maybe you just don't have access or privilege to do so, AWS has available to you, just click on the **shell icon**.
 
 **Preinstalled Tools:** AWS CLI, Python, Node.js, git, make, pip, sudo, tar, tmux, vim, wget, and zip and more.
 
-**Storage incuded:** 1 GB o fstorage free per AWS region.
+**Storage included:** 1 GB of storage free per AWS region.
 
 **Saved files and settings:** Files saved in your home directory are available in future sessions for the same AWS region.
 
@@ -314,7 +350,7 @@ CFN is a Declarative IaC tool.
 
 CDK is an Imperative IaC tool.
 
-**Imperatiev**
+**Imperative**
 - You say what you want, and the rest is filled in. ***Implicit***
 - Less verbose, you could end up with misconfiguration
 - Use programming languages e.g. Python, JavaScript
@@ -329,9 +365,9 @@ AWS CloudFormation allows you to write Infrastructure as Code (IaC) as either a 
 
 > Example of YAML file.
 
-CloudFormation is simple but it can lead to large filesor is limited in some regard to creating dynamic or repeatable infrastructure compared to CDK.
+CloudFormation is simple but it can lead to large files or is limited in some regard to creating dynamic or repeatable infrastructure compared to CDK.
 
-CloudForamtion can be easier for DevOps Engineers who do not have a background in web programming languages.
+CloudFormation can be easier for DevOps Engineers who do not have a background in web programming languages.
 
 Since CDK generates out CloudFormation, it's still important to be able to read and understand CloudFormation in order to debug IaC stacks. 
 
@@ -394,7 +430,7 @@ Create, debug and deploy serverless applications via SAM and CFN (pretty much th
 
 ## Access Keys 
 
-**Access Keys** is a ***key and secret*** required to have programmatic access to AWS resources wen interacting wth the AWS API outside of the AWS Managemenet Console.
+**Access Keys** is a ***key and secret*** required to have programmatic access to AWS resources wen interacting wth the AWS API outside of the AWS Management Console.
 
 > An Access Key is commonly referred to as **AWS Credentials** (not necessarily the username and password to login).
 
@@ -411,7 +447,7 @@ You can **generate** an Access Key and Secret
 - Never share your access keys
 - Never commit access keys to a codebase
 - You can have two active Access Keys
-- You can deactive Access Keys
+- You can deactivate Access Keys
 - Access Keys have whatever access a user has to AWS resources
 
 Access Keys are to be stored in `~/.aws/credentials` and follow a TOML file format.
@@ -421,7 +457,7 @@ Access Keys are to be stored in `~/.aws/credentials` and follow a TOML file form
 ![Example of the TOML file that stores aws credentials](/aws-certified-cloud-practitioner/assets/toml-file.jpg "Example of the TOML file that stores aws credentials")
 
 > **Default** will be the access key used when no profile is specified.
-> You can store multiple acess keys by giving the **profile** names
+> You can store multiple access keys by giving the **profile** names
 
 ![Example of the `aws configure`](/aws-certified-cloud-practitioner/assets/aws-config.jpg "Example of the `aws configure`")
 
