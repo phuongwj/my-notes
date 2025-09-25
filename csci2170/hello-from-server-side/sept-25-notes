@@ -1,0 +1,28 @@
+Understand differences between dynamic and static responses. 
+If everyone gets the same page, that means everyone’s getting the same page, that’s a static page.
+Say if you make a request to the signing in to your account, that’s a dynamic response. Responding to a customized request. 
+
+Understand why you’re getting request header, request body. 
+If the server needs to send you a response, it will send a response header. 
+A request header is followed by a request body. 
+If cookies need to be sent, they’ll be sent inside a header field. 
+
+When the server sends back the request, there’s also a thing called “e-tag” to determine whether the content has been changed or not.  
+
+A situation when the response does not contain any resource (response body)? If the only part of the response is just the header.
+HEAD method: Only requesting the header, not the body (when you’re only wanting to access meta data)
+
+Anything that can be customized for the user, cookie communication between the user and server, that’s the dynamic web-page behaviour (Instagram, Brightspace).
+
+Design pattern: MVC (Model-View-Controller)
+-	Model: responsible for the data, anything related to database system interaction. 
+-	View: responsible for the presentation of how the web page might look like. Basically the UI. 
+-	Controller: an intermediary between Model and View, controls what gets sent from the view.
+
+Templating Systems
+The data will update what we see for the template engine. 
+
+Content management systems:
+-	With Brightspace, we can’t really customize, or change anything.
+-	So CMS makes it very challenging to customize for specific purposes, that’s the limitations. 
+-	What the hell is decoupled content management systems.
