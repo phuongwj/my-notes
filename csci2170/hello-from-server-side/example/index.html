@@ -3,29 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSCI 2170 - Lecture 2</title>
+    <title>2170 - Lecture 3</title>
 
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif
+            font-family: Arial, Helvetica, sans-serif;
+            width: 80vw;
+            margin: 0 auto;
+        }
+        header#pg-banner {
+            border-bottom: 4px solid #00abff;
+            color: #707372;
+            margin: 0 0 2rem 0;
+        }
+        header#pg-banner > h1 {
+            height: 10vh;
+            text-align: center;
+            align-content: center;
+        }
+
+        form#my-simple-form {
+            width: 50%;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        div.form-group > label {
+            flex: 1;
+            font-size: 1.2rem;
+        }
+        div.form-group > input {
+            flex: 2;
+            padding: 0.5rem;
+            font-size: 1.2rem;
+        }
+        div.form-group {
+            display: flex; 
         }
     </style>
 </head>
 <body>
+    
     <header id="pg-banner">
-        <h1>Hello World</h1>
+        <h1>Hello world!</h1>
     </header>
 
     <main id="pg-main-content">
 
-        
-        <form action="">
-            <label for="i-srch-text">Enter search keywords</label>
-            <input type="text" name="search-text" id="i-srch-text">
+        <form id="my-simple-form" action="">
+            <div class="form-group">
+                <label for="i-srch-text">Enter search keywords: </label>
+                <input type="text" name="search-text" id="i-srch-text">
+            </div>
+            <input type="button" id="submit-btn" value="Submit!">
         </form>
-        
+
     </main>
 
     <footer id="pg-footer"></footer>
+    <script>
+        const text = document.getElementById("i-srch-text");
+        const button = document.getElementById("submit-btn");
+
+        button.addEventListener('click', () => {
+            console.log(text.value);
+        })
+
+        // Getting data asynchronously from DummyJSON.com
+        // fetch('from-this-URL')
+        // .then(handle-result-from-server)
+        // .then(handle-data-from-result)
+        // .catch(any-errors)
+
+        fetch("https://dummyjson.com/todos/1")
+        .then(res => res.json()) // what's received in this case is a promise of a result 
+        // the line 80 can also be known in the following format:
+        // function ((res)) {
+        //  return res.json(); (here, we're extracing the json of the result) (.json() is the same as JSON.parse())
+        // }
+        .then(data => console.log(data))
+        .catch(err => console.error(err))
+
+        
+        // Post or send data asynchronously from DummyJSON.com
+        // fetch('from-this-URL', {
+        //      method: "POST",
+        //      headers: {
+        //          'Content-Type': 'application/json'
+        //  },
+        //  body: JSON.stringify(data)
+        // })
+        // .then(handle-result-from-server)
+        // .then(handle-data-from-result)
+        // .catch(any-errors)
+
+    </script>
 </body>
 </html>
