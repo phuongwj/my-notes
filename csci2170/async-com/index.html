@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="msg">
+    </textarea>
+    <p>Remaining:<span id="remain">50</span></p>
+
+    <script>
+        const textArea = document.getElementById("msg");
+        const remain = document.getElementById("remain");
+
+        let counter = remain.textContent;
+
+        textArea.addEventListener('input', () => {
+            counter -= 1;
+            remain.textContent = counter;
+
+            if (counter < 0) {
+                textArea.readOnly = true;
+                remain.textContent = 0;
+            }
+        })
+    </script>
+</body>
+</html>

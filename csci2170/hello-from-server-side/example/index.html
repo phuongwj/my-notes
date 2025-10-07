@@ -68,7 +68,11 @@
         const button = document.getElementById("submit-btn");
 
         button.addEventListener('click', () => {
-            console.log(text.value);
+            getData(text.value);
+        })
+
+        document.querySelector("#my-simple-form").addEventListener('submit', () => {
+            event.preventDefault();
         })
 
         // Getting data asynchronously from DummyJSON.com
@@ -85,6 +89,22 @@
         // }
         .then(data => console.log(data))
         .catch(err => console.error(err))
+
+        async function getData(dataFromInput) {
+            let result = await fetch("https://dummyjson.com/todos/add", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    userId: 5,
+                    todo: dataFromInput,
+                    comleted: false
+                })
+            });
+            let data = await result.json();
+            const p = document.createElement('p');
+            p.textContent = data.todo;
+            document.getElementById('pg-main-content').appendChild(p);
+        };
 
         
         // Post or send data asynchronously from DummyJSON.com
