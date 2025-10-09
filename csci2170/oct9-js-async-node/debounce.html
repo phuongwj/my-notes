@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-ca">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Debouncing Discussion</title>
+</head>
+
+<body>
+    <h1>JS Debouncing Discussion</h1>
+    <label for="in">Enter text:</label>
+    <input id="in" type="text">
+    <p id="out"></p>
+    <script>
+        // YOUR CODE HERE
+
+        const input = document.getElementById("in");
+        const output = document.getElementById("out");
+
+        // 1. Listen for keyup on input
+        // 2. Clear timer, set timer (1s = 1000ms)
+        // 3. Display output in #out
+
+        // need to clear timeout of the first event, but how do we know which one to clear.
+        let timer;
+
+        input.addEventListener('input', () => {
+            clearTimeout(timer);
+
+            // here, we are referencing a particular timer that we're trying to clear.
+            timer = setTimeout(() => {
+                output.textContent = input.value;
+            }, 1000)
+        })
+
+        // setTimeout: 1st param - a reference to a functino that we need to use
+        // setTimeout: 2nd param - pass a anonymous event handler or callback
+
+        // Destructuring
+        // const courses = [2170, 2141, 2110, 2134];
+        // const [c1, c2, c3, c4] = courses; // doing this will allow you to access the elements inside courses by just simply calling c1, c2.
+        // so it's a compressed way of assigning variables. 
+
+    </script>
+</body>
+
+</html>
