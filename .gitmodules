@@ -1,0 +1,3 @@
+[submodule "csci2170/csci2170/node"]
+	path = csci2170/csci2170/node
+	url = https://git.cs.dal.ca/courses/2025-Fall/csci-2170/lecture-examples/node.git
