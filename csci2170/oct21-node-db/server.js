@@ -18,8 +18,8 @@ function validateUser(user) {
     return loggedIn;
 }
 
-http
-.createServer(
+/**
+const server = http.createServer(
     (req, res) => {
         // res.end("Hello world!");
         let loggedIn = false;
@@ -65,6 +65,12 @@ http
         res.end(responseDoc);
     }
 )
-.listen(port, "localhost", () => {
+*/
+
+const server = http.createServer((req, res) => {
+    console.log(req.url);
+})
+
+server.listen(port, "localhost", () => {
     console.log(`Listening on ${port}`);
 })
