@@ -19,7 +19,7 @@ Imagine Lunchables, say we call it Docker Lunchables, it contains:
 - Your code
 - Code dependencies (frameworks/libraries, databases, caching, etc. i.e. nodejs or python)
 - Environment settings
-- Everythign else you need to run your code
+- Everything else you need to run your code
 
 Then now you have that lunchable, you can bring that to anywhere, to anyone, you can also let your friend have it. No matter **where** or **who** uses it, **IT WORKS**.
 

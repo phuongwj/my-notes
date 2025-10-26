@@ -7,26 +7,39 @@
 - [Comparison between `Dockerfile` and `docker-compose.yaml`](#comparison-between-dockerfile-and-docker-composeyaml)
 
 ## Dockerfile
-- A **Dockerfile** is a set of instructions that tells Docker how to build an **image** - it defines the environment, dependencies, files, and default commansd for an application.
+- A **Dockerfile** is a *text file with instructions* for building a Docker Image. It's essentially a script that tells Docker how to construct your image step by step.
+- Key points:
+    + Contains commands like `FROM`, `COP`, `RUN`, `CMD`, `EXPOSE`
+    + Defines the base image, dependencies, files to include, and startup commands
+    + Used to create custom images for your applications
 - **"How to build a service"**
 
 
 
 ## Image
-- An **image** is the built, portable snapshot of your application, it's read-only and can be shared or deployed anywhere.
-- **"The built service"**
+- An **image** is the built, portable snapshot of your application, it's a read-only template that contains everything needed to run an application, and can be shared or deployed anywhere.
+    + Application Code
+    + Runtime environment (like Node.js or Python);
+    + System libraries and dependencies
+    + Configuration files
+- **"A recipe or blueprint. But it's just a static snapshot that doesn't execute anything by itself."**
 
 
 
 ## Container
-- A **container** is a running instance of that image - it executes your application in isolation with its own **filesystem, processes, and network**.
-- **"The running service"**
+- A **container** is a *running instance* of a Docker image. When you execute an image, it becomes a container.
+- Key characteristics:
+    + Isolated process running on your host machine
+    + Has its own filesystem, networking, and process space
+    + Can be started, stopped, restarted, or deleted
+    + Multiple containers can run from the same image
+- **"If an image is a recipe, a container is the actual cake you baked from it."**
 
 
 
 ## docker-compose.yaml
-- A **docker-compose.yaml** file orchestrates multiple containers at once. It can specify which images or Dockerfiles ot use, how containers communicate, what ports and volumes to expose, and other runtime configurations.
-- **"How multiple services work togeher"**
+- A **docker-compose.yaml** file orchestrates multiple containers at once. It can specify which images or Dockerfiles to use, how containers communicate, what ports and volumes to expose, and other runtime configurations.
+- **"How multiple services work together"**
 
 
 

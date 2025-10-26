@@ -5,16 +5,26 @@ const path = require ('path');
 const port = 8000;
 
 function validateUser(user) {
-    let loggedIn = false;
-    const users = fs.readFileSync(`${__dirname}/users.csv`,'utf-8');
+    const file = fs.readFileSync(`${__dirname}/users.csv`,'utf-8');
+    const users = file.split('\r\n'); 
 
-    users.split("\n").forEach( row => {
-        if (user.username === row.split(",")[1] && user.password === row.split(",")[2]) {
-            loggedIn = true;
+    // console.log(users.split("\n")[0].split(",")[1]);
+    // console.log(users.split("\n")[0].split(",")[2]);
+    // console.log(user.username === users.split("\n")[0].split(",")[1]);
+    // console.log(user.password === users.split("\n")[0].split(",")[2]);
+
+    // console.log(users.split("\n")[0].split(",")[2]);
+    // console.log(user.password);
+
+    for(row of users) {
+        const userDetails = row.split(',');
+        if ( (user.username == userDetails[1]) && (user.password == userDetails[2])) {
+            console.log("HUH");
+            return true;
         }
-    });
+    };
 
-    return loggedIn;
+    return false;
 }
 
 /** 
@@ -30,7 +40,7 @@ const server = http.createServer((req, res) => {
 
 
 const server = http.createServer((req, res) => {
-    let loggedIn = false;
+    // let loggedIn = false;
     let responseDoc;
     let chunk, userInfo;
 
@@ -41,7 +51,8 @@ const server = http.createServer((req, res) => {
 
         req.on("end", () => {
             userInfo = qs.parse(chunk);
-            loggedIn = validateUser(userInfo);
+            console.log(userInfo);
+            let loggedIn = validateUser(userInfo);
 
             console.log(`I'm logged in ${loggedIn}`);
 
