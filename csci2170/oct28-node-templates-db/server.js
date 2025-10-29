@@ -20,31 +20,30 @@ const server = http.createServer((req, res) => {
 
         // Your logic and code here
         // (1) Read from db (load DB with db.csv contents)
-        db.query("SELECT * FROM list", (err, result) => {
+        db.query("SELECT * FROM list", (err, res) => {
             if (err) {
                 console.error(err);
                 return;
             }
 
             // result.forEach(row => {
-            //     console.log(row.list_item);
-            // });
+            //     console.log(row);
+            // }) 
             let items = result.map((row) => {
-                // %{ITEM}% %{DONE}%
                 let updatedTodoItem = todoItem.replace('%{ITEM}%', row.list_item);
-                updatedTodoItem = updatedTodoItem.replace('%{DONE}%', row.done);
+                updatedTodoItem = todoItem.replace('%{DONE}%', row.done);
                 return updatedTodoItem;
             });
             // console.log(items);
 
-            res.end(todoResponse.replace('%{LIST}%', items.join('')));
-        });
+            res.end(todoResponse.replace('%{LIST}%', items.join()));
+        })
 
         // (2) Assemble the list items and their status into list items (item.html)
         // (3) Assemble the list and return the response (todo.html)
         // (4) Return todo.html
 
-        // res.end(todoResponse);
+        res.end('<h1>Welcome Home!</h1>');
     } else {
         res.writeHead(404, {'Content-Type': 'text/html'});
         res.end('<h1>ERROR 404 - Page Not Found</h1>');
