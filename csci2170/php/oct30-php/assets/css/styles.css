@@ -1,0 +1,84 @@
+/**
+ * CSCI 2170: Intro to Server-Side Scripting
+ * Academic Term: Fall Semester 2025
+ * Lecture discussions: __Oct 30, 2025__
+ * Dr. Raghav Sampangi (raghav@cs.dal.ca)
+ *
+ * Main stylesheet
+ */
+:root {
+    --global-padding: 1rem;
+    --text-colour-default: #3e3e3e;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80vw;
+    margin: 0 auto;
+    color: #3e3e3e;
+}
+
+body > * {
+    padding: var(--global-padding);
+}
+
+header#pg-banner {
+    height: calc(100px - 2*var(--global-padding));
+    align-content: center;
+    border-bottom: 2px solid gold;
+}
+
+footer#pg-footer {
+    height: calc(100px - 2*var(--global-padding));
+    align-content: center;
+    border-top: 1px solid lightgray;
+}
+
+main#pg-main-content {
+    min-height: 240px;
+}
+
+nav#primary-nav {
+    height: calc(54px - 2*var(--global-padding));
+    align-content: center;
+    background-color: #3e3e3e;
+    display: flex;
+    align-items: center;
+    gap: var(--global-padding);
+}
+
+nav#primary-nav > a,
+nav#primary-nav > a:link,
+nav#primary-nav > a:visited {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+nav#primary-nav > a:hover {
+    color: yellow;
+}
+
+form#contact-form {
+    width: 540px;
+    margin: 0 auto 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form#contact-form > div.form-group {
+    display: flex;
+    gap: 1rem;
+}
+form#contact-form > div.form-group > label {
+    flex: 1;
+    padding: 0.5rem 0;
+}
+
+form#contact-form > div.form-group > input,
+form#contact-form > div.form-group > textarea {
+    flex: 2;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.3rem;
+}
