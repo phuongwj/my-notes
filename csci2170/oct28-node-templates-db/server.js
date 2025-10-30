@@ -14,6 +14,8 @@ const server = http.createServer((req, res) => {
     // name returns the name of the resource
     //  --> (e.g., if path is /api/1, it will return 1)
     const { dir, name } = path.parse(req.url);
+    // there's actually a lot of kinds of parsing:
+    // - query.parsing, path.parsing, url.parsing, all kinds 
     
     if (dir === '/' || dir === '/todo') {
         res.writeHead(200, {'Content-Type': 'text/html'});
@@ -27,16 +29,22 @@ const server = http.createServer((req, res) => {
             }
 
             // result.forEach(row => {
-            //     console.log(row);
+            //     console.log(row.list_item);
             // }) 
+            // the results of the map method here is going to be an array.
             let items = result.map((row) => {
                 let updatedTodoItem = todoItem.replace('%{ITEM}%', row.list_item);
                 updatedTodoItem = todoItem.replace('%{DONE}%', row.done);
                 return updatedTodoItem;
             });
             // console.log(items);
-
-            res.end(todoResponse.replace('%{LIST}%', items.join()));
+            
+            // items will give us the list but there will be commas in between 
+            // because items is an array. therefore we need to use the method:
+            // .join('') - this is used to concatenate all elements of an array 
+            // into a single string, with an empty string '' as the separator 
+            // between the elements.
+            res.end(todoResponse.replace('%{LIST}%', items.join('')));
         })
 
         // (2) Assemble the list items and their status into list items (item.html)
