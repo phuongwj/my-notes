@@ -1,39 +1,14 @@
-<!--
- *
- * CSCI 2170: Intro to Server-Side Scripting
- * Academic Term: Fall Semester 2025
- * Lecture discussions: __Oct 30, 2025__
- * Dr. Raghav Sampangi (raghav@cs.dal.ca)
- *
- * Contact page
- *-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oct 30: Lecture discussions</title>
-
-    <!-- Link to the stylesheet -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-
-    <header id="pg-banner">
-        <h1>Oct 30: Lecture Discussions</h1>
-    </header>
-
-    <nav id="primary-nav">
-        <a href="index.php">Home</a>
-        <a href="#">Projects</a>
-        <a href="contact.php">Contact</a>
-    </nav>
-
+<?php
+    require_once "templates/header.php";
+    // before we have like include_once but i don't remember, make sure to 
+    // check again when reviewing 
+?>    
+    
     <main id="pg-main-content">
         <!-- Code for main content in contact.php -->
         <h2>Contact Us</h2>
 
-        <form id="contact-form" action="process-form" method="get">
+        <form id="contact-form" action="admin/process-form.php" method="get">
             <div class="form-group">
                 <label for="i-name">Full name:</label>
                 <input type="text" name="fname" id="i-name">
@@ -53,9 +28,6 @@
         </form>
     </main>
 
-    <footer id="pg-footer">
-        <p>&copy; 2025. This website</p>
-    </footer>
-    
-</body>
-</html>
+<?php
+    require_once "templates/footer.php";
+?>
