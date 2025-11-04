@@ -1,0 +1,12 @@
+Templating with PHP: headers, footers, we're able to extract common, reusable things 
+and use as templates. 
+
+Templating with Node.js: that also work, we can use modules, like export modules, etc.
+
+fopen(): function to open file 
+
+PHP_EOL (PHP End Of Line) - this is a constant within PHP, this will automatically add a 
+end of line character and moves the cursor to the next line for us (i think this is how
+it works...)
+
+When you're submitting data through the PHP asynchronously, you shouldn't use the $_POST thingy 
