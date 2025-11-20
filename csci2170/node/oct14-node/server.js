@@ -32,7 +32,7 @@ const server = http.createServer((request, response) => {
 
     // GET Request in the form: localhost:8000/?course=2170
     // (1) request.url -> gives us access to the URL
-    // (2) Process the URL, get access to the query string, etc.
+    // (2) Process the URL, get access to the query string, etc.ko
     let queryStringParams = url.parse(request.url).query;
     let params = qs.parse(queryStringParams);
 
