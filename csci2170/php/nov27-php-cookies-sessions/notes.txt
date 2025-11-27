@@ -1,0 +1,55 @@
+COOKIES:
+the cookies are sent a part of the request between client and server? 
+
+there is no cookies sent in the first communication, but in the subsequent ones, it is sent.
+i don't remember why.
+
+we try to echo the cookie statement to echo the cookie name, and send it as part of the 
+request. which gets sent to the javascript?
+
+try to maintain as much as possible between the implemetation of the client-side and 
+server-side.
+
+just like localstorage you did, just like that you will have the ability to access
+the cookie in the javascript file.
+
+when you're using php and using the cookies. the only required parameter is the
+name of the cookie.
+
+time() gives you the current time. when yuo call the setcookie(), the time parameter
+indicates how long we want the cookie to stay. we can also apply to just a sub-domain 
+but gotta make sure to specif the "/" or the "main", etc.
+
+deleting the cookie means you're setting the expiry date to be in the past.
+
+HTACCESS:
+
+.htaccess is the file where you configure the kinds of rules. custom rules for
+processing
+
+you can configure "that" in .htaccess 
+RewriteRule begins with api (i.e. request begins with the word "api/....." <- regex.)
+
+this line:  RewriteRule ^get/([0-9]+)$ get.php?id=$1 [L]
+- the [L] part is indicating that it's the last rule, and we're ending it there, no
+matter if we add more rules, it wouldn't take affect
+
+WEB SESSIONS:
+
+just a quick note, HTTP is stateless
+with session, it's saying that i want to remember the session that we have talked about.
+for example, if we login to brighspace, the brightspace file will stores the user id, get 
+whatever it needs to get. then it sends as part of a cookie on your computer????? but it 
+basically saves everything for you.
+
+SESSIONS IN PHP: 
+
+in any of the files you want to be linked with the session, you would put session start at
+the beginning of the file.
+
+sessions use cookies, but sessions have more functionalities than cookies.
+
+remmember to do the session_start()
+
+you are using cookies to try to find the information somehow, so we're not necessarily to use 
+cookies somehow. we're just getting the cookies to access stuffs on the server-side
